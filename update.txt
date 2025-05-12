@@ -1,0 +1,9 @@
+🚀 Result:
+Now, any time you make changes locally and push to GitHub, Netlify will automatically update your live website.
+
+To update:
+
+git add .
+git commit -m "Update XYZ"
+git push
+Let me know if you need help with any of these steps! 👍
