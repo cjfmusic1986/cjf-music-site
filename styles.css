@@ -65,3 +65,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+main h1 {
+  text-align: center;
+}
