@@ -7,10 +7,14 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-<nav class="main-nav">
-  <ul>
+<nav class="navbar">
+  <div class="logo">CJF Music</div>
+  <button class="menu-toggle" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
-    <li><a href="beats.html"> Beats</a></li>
+    <li><a href="beats.html">Beats</a></li>
     <li><a href="the-long-night.html">The Long Night (50 Cent Remix)</a></li>
   </ul>
 </nav>
@@ -65,5 +69,13 @@
      <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
     <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
   </footer>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
