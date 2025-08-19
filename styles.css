@@ -203,3 +203,18 @@ footer {
     padding: 10px 0;
   }
 }
+
+.platform-links {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.platform-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.platform-links li {
+  margin: 0.5rem 0;
+}
+
