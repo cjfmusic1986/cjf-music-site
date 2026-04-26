@@ -218,3 +218,14 @@ footer {
   margin: 0.5rem 0;
 }
 
+.video-container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+
