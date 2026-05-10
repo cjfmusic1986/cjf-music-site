@@ -411,13 +411,3 @@ footer {
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  .cassette-player {
-    width: 95%;
-    margin: 100px auto 30px auto;
-  }
-
-  .cassette-img {
-    width: 100%;
-  }
-}
