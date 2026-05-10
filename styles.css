@@ -424,7 +424,7 @@ footer {
 
 @media (max-width: 768px) {
   .reel {
-    transform: scale(1.1); /* smaller on mobile */
+    transform: scale(0.9); /* smaller on mobile */
   }
 
   .left-reel {
