@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CJF Cassette Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">CJF</div>
+  <button class="menu-toggle" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="beats.html">Beats</a></li>
+    <li><a href="the-long-night.html">The Long Night</a></li>
+    <li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
+    <li><a href="redamned.html">ReDAMNed</a></li>
+    <li><a href="lightyears.html">Light Years</a></li>
+    <li><a href="ash3.html" class="active">I'm Here Now</a></li>
+    <li><a href="cjfcassetteplayer.html" class="active">CJF Cassette Player</a></li>
+
+  </ul>
+</nav>
+<div class="cassette-player">
+  
+
+<img src="images/maxell-cassette.png" class="cassette-img">
+
+
+  <!-- Left Reel -->
+<div class="reel left-reel">
+  <div class="reel-center"></div>
+</div>
+
+<!-- Right Reel -->
+<div class="reel right-reel">
+  <div class="reel-center"></div>
+</div>
+
+<!-- Moving Tape -->
+<div class="tape-strip"></div>
+
+  <!-- Audio -->
+  <audio id="player">
+    <source src="music/7 Track EP.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Controls -->
+  <div class="cassette-controls">
+    <button onclick="playTape()">▶ PLAY</button>
+    <button onclick="pauseTape()">❚❚ PAUSE</button>
+    <button onclick="rewindTape()">⏪ REW</button>
+    <button onclick="fastForwardTape()">⏩ FF</button>
+    <button onclick="stopTape()">⏹ STOP</button>
+
+
+
+  </div>
+
+</div>
+
+ <h1><center>If you like any beats from this tape, please reach out to me.</center></h1>
+ <div class="cassette-tracklist">
+      <h3>Tracklist</h3>
+      <ol>
+        <li>This Thing Of Ours</li>
+        <li>Drug Mummy</li>
+        <li>Nancy Grace</li>
+        <li>Gone With The Wind</li>
+        <li>Detroit Red</li>
+        <li>How Do You Respond?</li>
+        <li>Write Those Wrongs</li>
+      </ol>
+    </div>
+  </div>
+
+
+<script>
+const audio = document.getElementById("player");
+const reels = document.querySelectorAll(".reel");
+
+function playTape() {
+  audio.play();
+
+  reels.forEach(reel => {
+    reel.classList.add("spin");
+  });
+}
+
+function pauseTape() {
+  audio.pause();
+
+  reels.forEach(reel => {
+    reel.classList.remove("spin");
+  });
+}
+
+function stopTape() {
+  audio.pause();
+  audio.currentTime = 0;
+
+  reels.forEach(reel => {
+    reel.classList.remove("spin");
+  });
+}
+
+function rewindTape() {
+  audio.currentTime -= 30;
+
+  if (audio.currentTime < 0) {
+    audio.currentTime = 0;
+  }
+}
+
+function fastForwardTape() {
+  audio.currentTime += 30;
+
+  if (audio.currentTime > audio.duration) {
+    audio.currentTime = audio.duration;
+  }
+}
+</script>
+<footer>
+  <p>&copy; 2026 CJF Music. All rights reserved.</p>
+  <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
+  <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
+
