@@ -411,41 +411,30 @@ footer {
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  .cassette-player {
-    width: 95%;
-    margin: 100px auto 30px auto;
-  }
 
-  .cassette-img {
-    width: 100%;
-  }
+
+.reel {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  background: #111;
+  border: 4px solid #444;
+  border-radius: 50%;
+  overflow: hidden;
+
+  /* IMPORTANT: remove top positioning hacks */
+  top: 50%;
+  transform: translateY(-50%) scale(1.6);
+
+  z-index: 5;
 }
 
-@media (max-width: 768px) {
-  .reel {
-    transform: scale(1.1); /* smaller on mobile */
-  }
-
-  .left-reel {
-    left: 20%;
-  }
-
-  .right-reel {
-    right: 20%;
-  }
+/* anchor left reel to cassette image area */
+.left-reel {
+  left: 18%;
 }
 
-@media (max-width: 768px) {
-  .cassette-controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .cassette-controls button {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
+/* anchor right reel */
+.right-reel {
+  right: 18%;
 }
