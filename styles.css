@@ -414,71 +414,46 @@ footer {
     width: 100%;
   }
 
-  /* REELS */
+  /* 🔥 FIX: keep reels aligned to image */
   .reel {
-    width: 40px;
-    height: 40px;
-    top: 42%;
+    width: 38px;
+    height: 38px;
+
+    top: 41%;
+
+    /* IMPORTANT: switch to transform centering instead of left/right guessing */
   }
 
   .left-reel {
-    left: 24%;
+    left: 50%;
+    transform: translate(-140px, -50%) scale(1.1);
   }
 
   .right-reel {
-    right: 24%;
+    left: 50%;
+    transform: translate(100px, -50%) scale(1.1);
   }
 
-  /* SPIN SCALE */
+  /* spinning stays consistent */
   @keyframes reelSpin {
-
     from {
       transform: rotate(0deg) scale(1.1);
     }
-
     to {
       transform: rotate(360deg) scale(1.1);
     }
-
   }
 
-  /* TAPE */
+  /* tape stays centered */
   .tape-strip {
     width: 140px;
     height: 5px;
     top: 38%;
   }
 
-  /* BUTTONS */
-  .cassette-controls {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .cassette-controls button {
-    padding: 10px 14px;
-    font-size: 13px;
-  }
-
-  /* MESSAGE */
-  .beat-message {
-    font-size: 18px;
-    padding: 0 10px;
-  }
-
-  /* TRACKLIST */
-  .cassette-tracklist h3 {
-    font-size: 24px;
-  }
-
-  .cassette-tracklist ol {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
 }
+
+
 
 .video-container {
   max-width: 800px;
