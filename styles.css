@@ -221,11 +221,7 @@ footer {
 
 
 /* Cassette Player */
-.cassette-player {
-  position: relative;
-  width: 900px;
-  max-width: 95%;
-}
+
 
 .cassette-img {
   width: 91%;
@@ -367,17 +363,13 @@ footer {
 
 .cassette-player {
   position: relative;
+
   width: 900px;
   max-width: 95%;
+
+  margin: 80px auto 0;
+
   text-align: center;
-}
-
-.cassette-player {
-  position: relative;
-  width: 900px;
-  max-width: 95%;
-
-  margin: 80px auto 0; /* pushes it down */
 }
 
 
@@ -407,14 +399,14 @@ footer {
 
   .cassette-player {
     width: 95%;
-    margin: 100px auto 40px auto;
+    margin: 60px auto 40px auto;
   }
 
   .cassette-img {
     width: 100%;
   }
 
-  /* KEEP REELS SIMPLE AND CENTERED ON IMAGE */
+  /* REELS SCALE ONLY (DON'T MOVE WITH LEFT/RIGHT CHANGES) */
   .reel {
     width: 38px;
     height: 38px;
@@ -422,19 +414,17 @@ footer {
     transform: scale(1.1);
   }
 
+  /* keep same positioning ratio */
   .left-reel {
-    left: 22%;
+    left: 27%;
   }
 
   .right-reel {
-    right: 22%;
+    right: 27%;
   }
 
 }
 
-.cassette-img {
-  margin-top: 40px;
-}
 
 .video-container {
   max-width: 800px;
