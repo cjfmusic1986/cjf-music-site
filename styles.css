@@ -1,81 +1,235 @@
-/* Light Theme Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-section {
-    padding: 80px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.album-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.album {
-    background-color: #ffffff;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    border-radius: 5px;
-}
-
-.album img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px; /* optional for rounded corners */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* optional for visual polish */
-}
-
-.album h3 {
-    margin: 10px 0;
-    font-size: 1.2em;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 50px;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-main h1 {
-  text-align: center;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  color: #333;
+  background: #0f0f0f;
+  color: #f1f1f1;
+  line-height: 1.6;
 }
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 15px 30px;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #fff;
+}
+
+/* Mobile Menu */
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: #111;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+main h1 {
+  text-align: center;
+  padding: 40px 20px 20px;
+  font-size: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  color: #ffffff;
+}
+
+/* =========================
+   ALBUM GRID
+========================= */
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 40px 30px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* =========================
+   ALBUM CARD
+========================= */
+
+.album {
+  background: #181818;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  transition: 0.35s ease;
+  border: 1px solid #222;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.album:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+/* Album Cover */
+
+.album img {
+  width: 100%;
+  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.album:hover img {
+  transform: scale(1.02);
+}
+
+/* Album Title */
+
+.album h3 {
+  margin: 18px 0 15px;
+  font-size: 1.1rem;
+  color: #fff;
+  min-height: 50px;
+}
+
+/* Audio Player */
+
+.album audio {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 30px;
+}
+
+/* Download Button */
+
+.download-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.download-button button {
+  width: 220px;
+  padding: 12px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 1rem;
+}
+
+.download-button button:hover {
+  background: #d9d9d9;
+  transform: scale(1.03);
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  margin-top: 60px;
+  background: #111;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+footer p {
+  margin: 8px 0;
+  color: #aaa;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+footer a:hover {
+  color: #ccc;
+}
+
+/* =========================
+   TRACKLIST PAGES
+========================= */
 
 .title {
   text-align: center;
@@ -87,7 +241,8 @@ body {
   max-width: 800px;
   margin: 1rem auto;
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.8;
+  padding: 0 20px;
 }
 
 .album-cover {
@@ -97,140 +252,201 @@ body {
 
 .album-cover img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .tracklist {
-  max-width: 600px;
-  margin: 2rem auto;
-}
-
-.tracklist ol {
-  list-style-position: inside;
-  padding: 0;
-  margin: 0;
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 20px;
 }
 
 .tracklist li {
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+  margin-bottom: 2rem;
 }
 
 .tracklist audio {
-  display: block;
-  margin-top: 0.5rem;
+  width: 100%;
+  margin-top: 10px;
 }
 
-.download-button {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.download-button button {
-  padding: 0.6rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  margin-top: 4rem;
-  font-size: 0.9rem;
-  color: #777;
-}
-.tracklist audio {
-  display: block;
-  margin: 0.5rem auto;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  color: white;
-  padding: 10px 20px;
-  position: relative;
-}
-
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.menu-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.8em;
-  display: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background: #111;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
-  }
-}
-
-.platform-links {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.platform-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.platform-links li {
-  margin: 0.5rem 0;
-}
-
-
+/* =========================
+   VIDEO SECTION
+========================= */
 
 .video-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  text-align: center;
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 20px;
 }
 
 .video-container iframe {
   width: 100%;
-  height: 450px;
-  border-radius: 10px;
+  height: 500px;
+  border: none;
+  border-radius: 15px;
 }
 
+/* =========================
+   PLATFORM LINKS
+========================= */
 
+.platform-links {
+  text-align: center;
+  margin-top: 3rem;
+}
 
+.platform-links ul {
+  list-style: none;
+}
+
+.platform-links li {
+  margin: 10px 0;
+}
+
+.platform-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.platform-links a:hover {
+  color: #bbb;
+}
+ /* =========================
+   CASSETTE PLAYER (BOTTOM SECTION)
+========================= */
+
+.cassette{
+  margin: 0 auto;
+}
+
+.cassette {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  background: #d8d8d8;
+  border-radius: 18px;
+  border: 8px solid #444;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,.6);
+  margin-top: 40px;
+}
+
+/* Top label */
+.label {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: #c40000;
+}
+
+.label h1 {
+  color: white;
+  text-align: center;
+  line-height: 90px;
+  margin: 0;
+  letter-spacing: 4px;
+}
+
+/* Window */
+.window {
+  position: absolute;
+  top: 110px;
+  left: 100px;
+  width: 500px;
+  height: 160px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Reels */
+.reel {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border: 8px solid #888;
+  border-radius: 50%;
+  top: 15px;
+  background: #111;
+}
+
+.left { left: 40px; }
+.right { right: 40px; }
+
+/* Reel details */
+.reel::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border: 8px dashed #ccc;
+  border-radius: 50%;
+}
+
+.reel::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Tape line */
+.tape {
+  position: absolute;
+  top: 76px;
+  left: 170px;
+  width: 160px;
+  height: 6px;
+  background: #555;
+}
+
+/* Animation */
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Controls */
+.controls {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+.controls button {
+  background: #111;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.controls button:hover {
+  background: #c40000;
+}
+
+/* =========================
+   CENTER CASSETTE PROPERLY
+========================= */
+
+.cassette-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:80px 20px;
+  min-height:calc(100vh - 140px); /* keeps space for navbar/footer */
+}
