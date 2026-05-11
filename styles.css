@@ -406,7 +406,7 @@ footer {
     width: 100%;
   }
 
-  /* REELS SCALE ONLY (DON'T MOVE WITH LEFT/RIGHT CHANGES) */
+  /* IMPORTANT: anchor reels to center instead of edges */
   .reel {
     width: 38px;
     height: 38px;
@@ -414,13 +414,16 @@ footer {
     transform: scale(1.1);
   }
 
-  /* keep same positioning ratio */
+  /* LEFT REEL */
   .left-reel {
-    left: 27%;
+    left: 50%;
+    transform: translateX(-140px) scale(1.1);
   }
 
+  /* RIGHT REEL */
   .right-reel {
-    right: 27%;
+    left: 50%;
+    transform: translateX(100px) scale(1.1);
   }
 
 }
