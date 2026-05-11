@@ -399,6 +399,87 @@ footer {
   line-height: 1.8;
 }
 
+/* ========================= */
+/* MOBILE FIX */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .cassette-player {
+    width: 95%;
+    margin: 100px auto 40px auto;
+  }
+
+  .cassette-img {
+    width: 100%;
+  }
+
+  /* REELS */
+  .reel {
+    width: 40px;
+    height: 40px;
+    top: 42%;
+  }
+
+  .left-reel {
+    left: 24%;
+  }
+
+  .right-reel {
+    right: 24%;
+  }
+
+  /* SPIN SCALE */
+  @keyframes reelSpin {
+
+    from {
+      transform: rotate(0deg) scale(1.1);
+    }
+
+    to {
+      transform: rotate(360deg) scale(1.1);
+    }
+
+  }
+
+  /* TAPE */
+  .tape-strip {
+    width: 140px;
+    height: 5px;
+    top: 38%;
+  }
+
+  /* BUTTONS */
+  .cassette-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .cassette-controls button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  /* MESSAGE */
+  .beat-message {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  /* TRACKLIST */
+  .cassette-tracklist h3 {
+    font-size: 24px;
+  }
+
+  .cassette-tracklist ol {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+}
+
 .video-container {
   max-width: 800px;
   margin: 2rem auto;
