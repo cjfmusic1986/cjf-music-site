@@ -316,8 +316,24 @@ footer a:hover {
    CASSETTE PLAYER (BOTTOM SECTION)
 ========================= */
 
+.cassette-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:80px 20px;
+  min-height:calc(100vh - 140px);
+}
+
 .cassette{
   margin: 0 auto;
+  position: relative;
+  width: 700px;
+  height: 400px;
+  background: #d8d8d8;
+  border-radius: 18px;
+  border: 8px solid #444;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,.6);
 }
 
 .cassette {
@@ -330,50 +346,6 @@ footer a:hover {
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0,0,0,.6);
   margin-top: 40px;
-}
-
-@media (max-width: 768px) {
-
-  .cassette-wrapper{
-    padding: 40px 10px;
-  }
-
-  .cassette{
-    border-width: 5px;
-  }
-
-  .window{
-    width: 80%;
-    left: 10%;
-    height: 120px;
-    top: 90px;
-  }
-
-  .reel{
-    width: 90px;
-    height: 90px;
-    border-width: 6px;
-    top: 15px;
-  }
-
-  .left{ left: 10px; }
-  .right{ right: 10px; }
-
-  .tape{
-    width: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 55px;
-  }
-
-  .controls{
-    bottom: 15px;
-  }
-
-  .controls button{
-    padding: 10px 16px;
-    font-size: 14px;
-  }
 }
 
 /* Top label */
@@ -483,14 +455,3 @@ footer a:hover {
   background: #c40000;
 }
 
-/* =========================
-   CENTER CASSETTE PROPERLY
-========================= */
-
-.cassette-wrapper{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:80px 20px;
-  min-height:calc(100vh - 140px); /* keeps space for navbar/footer */
-}
