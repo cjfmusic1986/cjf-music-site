@@ -177,10 +177,33 @@ main h1 {
 
 /* Download Button */
 
+.album button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.album button:hover {
+  background: #cfcfcf;
+  transform: scale(1.02);
+}
+.download-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
 .download-button {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
 }
 
 .download-button button {
@@ -200,6 +223,7 @@ main h1 {
   background: #d9d9d9;
   transform: scale(1.03);
 }
+
 /* =========================
    FOOTER
 ========================= */
@@ -311,133 +335,4 @@ footer a:hover {
 
 .platform-links a:hover {
   color: #bbb;
-}
- /* =========================
-   CASSETTE PLAYER (BOTTOM SECTION)
-========================= */
-
-.cassette-wrapper{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:80px 20px;
-  min-height:calc(100vh - 140px);
-}
-
-.cassette{
-  margin: 0 auto;
-  position: relative;
-  width: 700px;
-  height: 400px;
-  background: #d8d8d8;
-  border-radius: 18px;
-  border: 8px solid #444;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(0,0,0,.6);
-}
-/* Top label */
-.label {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 90px;
-  background: #c40000;
-}
-
-.label h1 {
-  color: white;
-  text-align: center;
-  line-height: 90px;
-  margin: 0;
-  letter-spacing: 4px;
-}
-
-/* Window */
-.window {
-  position: absolute;
-  top: 110px;
-  left: 100px;
-  width: 500px;
-  height: 160px;
-  background: #222;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* Reels */
-.reel {
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  border: 8px solid #888;
-  border-radius: 50%;
-  top: 15px;
-  background: #111;
-}
-
-.left { left: 40px; }
-.right { right: 40px; }
-
-/* Reel details */
-.reel::before {
-  content: "";
-  position: absolute;
-  inset: 20px;
-  border: 8px dashed #ccc;
-  border-radius: 50%;
-}
-
-.reel::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #ccc;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Tape line */
-.tape {
-  position: absolute;
-  top: 76px;
-  left: 170px;
-  width: 160px;
-  height: 6px;
-  background: #555;
-}
-
-/* Animation */
-.spin {
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/* Controls */
-.controls {
-  position: absolute;
-  bottom: 40px;
-  width: 100%;
-  text-align: center;
-}
-
-.controls button {
-  background: #111;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  margin: 0 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.controls button:hover {
-  background: #c40000;
 }
