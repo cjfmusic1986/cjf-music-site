@@ -414,46 +414,23 @@ footer {
     width: 100%;
   }
 
-  /* 🔥 FIX: keep reels aligned to image */
+  /* KEEP REELS SIMPLE AND CENTERED ON IMAGE */
   .reel {
     width: 38px;
     height: 38px;
-
     top: 41%;
-
-    /* IMPORTANT: switch to transform centering instead of left/right guessing */
+    transform: scale(1.1);
   }
 
   .left-reel {
-    left: 40%;
-    transform: translate(-140px, -50%) scale(1.1);
+    left: 22%;
   }
 
   .right-reel {
-    left: 40%;
-    transform: translate(100px, -50%) scale(1.1);
-  }
-
-  /* spinning stays consistent */
-  @keyframes reelSpin {
-    from {
-      transform: rotate(0deg) scale(1.1);
-    }
-    to {
-      transform: rotate(360deg) scale(1.1);
-    }
-  }
-
-  /* tape stays centered */
-  .tape-strip {
-    width: 140px;
-    height: 5px;
-    top: 38%;
+    right: 22%;
   }
 
 }
-
-
 
 .video-container {
   max-width: 800px;
