@@ -425,12 +425,12 @@ footer {
   }
 
   .left-reel {
-    left: 24%;
+    left: 40%;
     transform: translate(-140px, -50%) scale(1.1);
   }
 
   .right-reel {
-    left: 24%;
+    left: 40%;
     transform: translate(100px, -50%) scale(1.1);
   }
 
