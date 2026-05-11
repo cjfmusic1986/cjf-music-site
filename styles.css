@@ -335,19 +335,6 @@ footer a:hover {
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0,0,0,.6);
 }
-
-.cassette {
-  position: relative;
-  width: 700px;
-  height: 400px;
-  background: #d8d8d8;
-  border-radius: 18px;
-  border: 8px solid #444;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(0,0,0,.6);
-  margin-top: 40px;
-}
-
 /* Top label */
 .label {
   position: absolute;
@@ -453,52 +440,4 @@ footer a:hover {
 
 .controls button:hover {
   background: #c40000;
-}
-
-
-
-
-
-@media (max-width: 768px) {
-
-  .cassette-wrapper{
-    padding: 40px 10px;
-  }
-
-  .cassette{
-    border-width: 5px;
-  }
-
-  .window{
-    width: 80%;
-    left: 10%;
-    height: 120px;
-    top: 90px;
-  }
-
-  .reel{
-    width: 90px;
-    height: 90px;
-    border-width: 6px;
-    top: 15px;
-  }
-
-  .left{ left: 10px; }
-  .right{ right: 10px; }
-
-  .tape{
-    width: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 55px;
-  }
-
-  .controls{
-    bottom: 15px;
-  }
-
-  .controls button{
-    padding: 10px 16px;
-    font-size: 14px;
-  }
 }
