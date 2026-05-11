@@ -432,6 +432,10 @@ footer {
 
 }
 
+.cassette-img {
+  margin-top: 40px;
+}
+
 .video-container {
   max-width: 800px;
   margin: 2rem auto;
