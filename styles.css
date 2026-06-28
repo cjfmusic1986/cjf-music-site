@@ -23,10 +23,6 @@ body {
    NAVBAR
 ========================= */
 
-/* =========================
-   NAVBAR (FIXED CLEAN VERSION)
-========================= */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -39,93 +35,32 @@ body {
   z-index: 1000;
 }
 
-/* Logo */
 .logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
-
-.logo img {
-  height: 55px;
-  width: auto;
-  display: block;
-  transition: 0.3s ease;
-}
-
-.logo img:hover {
-  transform: scale(1.05);
-}
-
-/* =========================
-   DESKTOP NAV
-========================= */
 
 .nav-links {
-  list-style: none;
   display: flex;
-  align-items: center;
+  list-style: none;
   gap: 20px;
 }
 
-.nav-links li {
-  position: relative;
-}
-
-.nav-links a {
-  display: block;
+.nav-links li a {
   color: #ccc;
   text-decoration: none;
-  padding: 10px 15px;
   transition: 0.3s ease;
   font-size: 0.95rem;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links li a:hover,
+.nav-links li a.active {
   color: #fff;
 }
 
-/* =========================
-   DROPDOWN (DESKTOP)
-========================= */
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 230px;
-  background: #111;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.35);
-  z-index: 999;
-}
-
-.dropdown-menu li {
-  width: 100%;
-}
-
-.dropdown-menu a {
-  padding: 12px 18px;
-  color: white;
-}
-
-.dropdown-menu a:hover {
-  background: #c40000;
-}
-
-/* hover dropdown for desktop */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* =========================
-   MOBILE MENU
-========================= */
+/* Mobile Menu */
 
 .menu-toggle {
   display: none;
@@ -145,10 +80,10 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
+    width: 100%;
     position: absolute;
     top: 70px;
     left: 0;
-    width: 100%;
     background: #111;
     padding: 20px 0;
     text-align: center;
@@ -159,26 +94,10 @@ body {
   }
 
   .nav-links li {
-    width: 100%;
-  }
-
-  /* mobile dropdown */
-  .dropdown-menu {
-    position: static;
-    display: none;
-    background: #222;
-    box-shadow: none;
-  }
-
-  .dropdown.open .dropdown-menu {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .dropdown-menu a {
-    padding-left: 35px;
+    margin: 10px 0;
   }
 }
+
 /* =========================
    MAIN TITLE
 ========================= */
@@ -792,3 +711,19 @@ footer a:hover {
     transform:scale(1.05);
 }
 
+.dropdown-menu{
+    display:none;
+}
+
+.dropdown.open .dropdown-menu{
+    display:block;
+}
+
+/* Desktop */
+@media (min-width:769px){
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+}
