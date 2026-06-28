@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CJF Beats</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- <nav class="navbar">
+
+<nav class="navbar">
   <div class="logo">CJF</div>
 
   <button class="menu-toggle" aria-label="Toggle navigation">
@@ -18,9 +19,9 @@
 
     <li><a href="index.html">Home</a></li>
 
-    <li><a href="beats.html">Beats</a></li>
+    <li><a href="beats.html" class="active">Beats</a></li>
 
-    <!-- Jay-Z Dropdown -->
+    <!-- Jay-Z Remix Series -->
     <li class="dropdown">
       <a href="jayz-remixes.html">Jay-Z Remixes ▾</a>
 
@@ -32,79 +33,126 @@
       </ul>
     </li>
 
-     <!-- Original Projects Dropdown -->
+    <!-- Original Projects -->
     <li class="dropdown">
-      <a href="original-projects.html" class="active">Original Projects ▾</a>
+      <a href="original-projects.html">Original Projects ▾</a>
 
       <ul class="dropdown-menu">
         <li><a href="ash3.html">I'm Here Now</a></li>
         <li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
-        <li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
-        <li><a href="2024-musical-odyssey.html" class="active">2024: A Musical Odyssey</a></li>
-
-
+        <li><a href="cjf-radiovol3.html">CJF Radio Vol. 3</a></li>
+        <li><a href="2024-musical-odyssey.html">2024: A Musical Odyssey</a></li>
       </ul>
     </li>
 
+    <li><a href="remix-projects.html">Remix Projects</a></li>
 
-    <li><a href="remix-projects.html" class="active"> Remix Projects</a></li>
     <li><a href="Remixes.html">Singles & Remixes</a></li>
 
   </ul>
 </nav>
 
-  <main>
-  <h1>Download An Beat Below. Please reach out if you record something to it.</h1> 
-    <div class="album-grid">
-      <div class="album">
-        <img src="images/CJF Music Logo.png" alt="Beat 1 Cover">
-        <h3>White Raw</h3>
-        <audio controls>
-          <source src="beats/White Raw.mp3" type="audio/mpeg">
-          Your browser does not support the audio tag.
-        </audio>
-        <a href="https://drive.google.com/uc?export=download&id=1U1Th9Wl0HyYtCiCH_mNZla4qzzXmA0GB" download>
-          <button>Download</button>
-        </a>
-      </div>
+<main>
 
-      <div class="album">
-        <img src="images/CJF Music Logo.png" alt="Beat 2 Cover">
-        <h3>Paul Bearer</h3>
-        <audio controls>
-          <source src="beats/Paul Bearer.mp3" type="audio/mpeg">
-        </audio>
-        <a href="https://drive.google.com/uc?export=download&id=1C1RQj8k51QOcqdud3kuLy7avYUIrunlw" download>
-          <button>Download</button>
-        </a>
-      </div>
+<main>
 
-      <div class="album">
-        <img src="images/CJF Music Logo.png" alt="Beat 3 Cover">
-        <h3>Street Author</h3>
-        <audio controls>
-          <source src="beats/Street Author.mp3" type="audio/mpeg">
-        </audio>
-        <a href="https://drive.google.com/uc?export=download&id=1n7b0jZI7sk4s5zY2AnTzuaWiKFRKXgsb" download>
-          <button>Download</button>
-        </a>
-      </div>
+  <section class="page-header">
+
+    <h1 class="title"> Beats</h1>
+
+    <p class="description">
+      Download free boom bap instrumentals produced by CJF1986.
+      If you record a song using one of these beats, I'd love to hear it.
+      For exclusive licenses, custom production, or collaborations,
+      get in touch through my email
+    </p>
+
+    
+
+  </section>
+
+  <div class="album-grid">
+
+    <div class="album">
+      <img src="images/CJF Music Logo.png" alt="White Raw">
+      <h3>White Raw</h3>
+
+      <audio controls>
+        <source src="beats/White Raw.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="https://drive.google.com/uc?export=download&id=1U1Th9Wl0HyYtCiCH_mNZla4qzzXmA0GB" download>
+        <button>Download</button>
+      </a>
     </div>
-  </main>
 
-  <footer>
-    <p>&copy; 2026 CJF Music All rights reserved. </p>
-    <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
-    <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
-    <p><a href="index.html">Home</a></p>
-  </footer>
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    <div class="album">
+      <img src="images/CJF Music Logo.png" alt="Paul Bearer">
+      <h3>Paul Bearer</h3>
 
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
+      <audio controls>
+        <source src="beats/Paul Bearer.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="https://drive.google.com/uc?export=download&id=1C1RQj8k51QOcqdud3kuLy7avYUIrunlw" download>
+        <button>Download</button>
+      </a>
+    </div>
+
+    <div class="album">
+      <img src="images/CJF Music Logo.png" alt="Street Author">
+      <h3>Street Author</h3>
+
+      <audio controls>
+        <source src="beats/Street Author.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="https://drive.google.com/uc?export=download&id=1n7b0jZI7sk4s5zY2AnTzuaWiKFRKXgsb" download>
+        <button>Download</button>
+      </a>
+    </div>
+
+    <!-- Add the rest of your beats here -->
+
+  </div>
+
+  <section class="description">
+
+    <h2>Need Exclusive Production?</h2>
+
+    <p>
+      Looking for a custom beat, exclusive license, or a full production
+      for your next project? I'm always open to collaborating with artists
+      who appreciate classic East Coast hip-hop.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="https://linktr.ee/cjfernanders1986" target="_blank">
+        <button>Beat Catalog</button>
+      </a>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+<footer>
+  <p>&copy; 2026 CJF Music. All rights reserved.</p>
+  <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
+  <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
+</footer>
+
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
 </body>
 </html>
