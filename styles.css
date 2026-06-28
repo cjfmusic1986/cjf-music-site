@@ -420,3 +420,275 @@ footer a:hover {
   margin: 5px;
   padding: 10px 14px;
 }
+
+.album-navigation {
+    display: flex;
+    justify-content: center; /* centers the buttons horizontally */
+    align-items: center;
+    gap: 20px;
+    margin: 40px auto;
+}
+
+.album-navigation a {
+    text-decoration: none;
+}
+
+.album-navigation button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    background: #111;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.album-navigation button:hover {
+    background: #333;
+}
+
+/* ===========================
+   Dropdown Navigation
+=========================== */
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Dropdown */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background: #111;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 12px 18px;
+    color: white;
+}
+
+.dropdown-menu a:hover {
+    background: #c40000;
+}
+
+/* Show dropdown */
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+@media (max-width:768px){
+
+  .menu-toggle{
+      display:block;
+  }
+
+  .nav-links{
+      display:none;
+      flex-direction:column;
+      position:absolute;
+      top:60px;
+      left:0;
+      width:100%;
+      background:#111;
+      gap:0;
+  }
+
+  .nav-links.active{
+      display:flex;
+  }
+
+  .nav-links li{
+      width:100%;
+      text-align:center;
+  }
+
+  .dropdown-menu{
+      position:static;
+      display:block;
+      background:#222;
+      box-shadow:none;
+      width:100%;
+  }
+
+  .dropdown-menu a{
+      padding-left:35px;
+  }
+}
+
+.hero {
+    position: relative;
+    background: url("images/banner.jpg") center center/cover no-repeat;
+    height: 380px;           /* Was probably 600px+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+}
+
+@media (max-width:768px){
+
+.hero{
+    height:240px;
+}
+
+.hero-content h1{
+    font-size:2rem;
+}
+
+.hero-content p{
+    font-size:1rem;
+}
+
+}
+
+.about-section {
+    max-width: 850px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.beats-section {
+    max-width: 850px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.beats-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.beats-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.beats-section button {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.beats-section button:hover {
+    background: #12399c;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+}
+
+.hero-buttons button {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.hero-buttons button:hover {
+    background: #d40000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0,0,0,.25);
+}
+
+.hero-buttons button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons button {
+        width: 250px;
+    }
+}

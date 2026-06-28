@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay-Z Remix Series</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">CJF</div>
+
+  <button class="menu-toggle" aria-label="Toggle navigation">
+    ☰
+  </button>
+
+  <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="beats.html">Beats</a></li>
+
+    <!-- Jay-Z Dropdown -->
+    <li class="dropdown">
+      <a href="jayz-remixes.html">Jay-Z Remixes ▾</a>
+
+      <ul class="dropdown-menu">
+        <li><a href="The Blendprint.html">The Blendprint</a></li>
+        <li><a href="the black blend.html">The Black Blend</a></li>
+        <li><a href="american-blend.html">The American Blend</a></li>
+        <li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
+      </ul>
+    </li>
+
+     <!-- Original Projects Dropdown -->
+    <li class="dropdown">
+      <a href="original-projects.html" class="active">Original Projects ▾</a>
+
+      <ul class="dropdown-menu">
+        <li><a href="ash3.html">I'm Here Now</a></li>
+        <li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
+        <li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
+        <li><a href="2024-musical-odyssey.html" class="active">2024: A Musical Odyssey</a></li>
+
+
+      </ul>
+    </li>
+
+
+    <li><a href="Remix Projects.html" class="active"> Remix Projects</a></li>
+    <li><a href="Remixes.html">Singles & Remixes</a></li>
+
+  </ul>
+</nav>
+
+<main>
+
+<h1 class="title">Jay-Z Remix Series</h1>
+
+<p class="description">
+The projects that started the CJF1986 remix catalog.
+Explore four full-length Jay-Z remix albums featuring
+entirely new production and a fresh take on classic material.
+</p>
+
+<div class="album-grid">
+
+  <div class="album">
+    <a href="The Blendprint.html">
+      <img src="images/The Blendprint (2026) Cover.png" alt="The Blendprint">
+    </a>
+    <h3>The Blendprint</h3>
+  </div>
+
+  <div class="album">
+    <a href="the black blend.html">
+      <img src="images/The Black Blend-Cover-art.png" alt="The Black Blend">
+    </a>
+    <h3>The Black Blend</h3>
+  </div>
+
+  <div class="album">
+    <a href="american-blend.html">
+      <img src="images/The American Blend-cover.png" alt="The American Blend">
+    </a>
+    <h3>The American Blend</h3>
+  </div>
+
+  <div class="album">
+    <a href="soul-of-hov.html">
+      <img src="images/Jay Z-min.png" alt="The Soul Of Hov">
+    </a>
+    <h3>The Soul Of Hov</h3>
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 CJF Music. All rights reserved.</p>
+  <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
+  <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
