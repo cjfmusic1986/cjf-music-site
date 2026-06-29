@@ -19,6 +19,8 @@ body {
   line-height: 1.6;
 }
 
+
+
 /* =========================
    NAVBAR
 ========================= */
@@ -33,6 +35,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  
 }
 
 .logo {
@@ -728,14 +732,10 @@ footer a:hover {
 
 }
 
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
+@media (max-width: 768px) {
 
-body{
-    padding-top: 80px;
+  .hero {
+    padding-top: 70px; /* Adjust as needed */
+  }
+
 }
