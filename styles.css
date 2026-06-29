@@ -35,7 +35,6 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-
   
 }
 
@@ -732,10 +731,3 @@ footer a:hover {
 
 }
 
-@media (max-width: 768px) {
-
-  .hero {
-    padding-top: 70px; /* Adjust as needed */
-  }
-
-}
