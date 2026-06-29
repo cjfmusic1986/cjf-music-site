@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Original Projects</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+
+  <a href="index.html" class="logo">
+    <img src="images/CJF Music Logo.png" alt="CJF1986 Logo">
+  </a>
+
+  <button class="menu-toggle" aria-label="Toggle navigation">
+    ☰
+  </button>
+
+
+  <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="beats.html">Beats</a></li>
+
+    <!-- Jay-Z Dropdown -->
+    <li class="dropdown">
+      <a href="jayz-remixes.html">Jay-Z Remixes ▾</a>
+
+      <ul class="dropdown-menu">
+        <li><a href="theblendprint.html">The Blendprint</a></li>
+        <li><a href="theblackblend.html">The Black Blend</a></li>
+        <li><a href="american-blend.html">The American Blend</a></li>
+        <li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
+      </ul>
+    </li>
+
+    <!-- Original Projects Dropdown -->
+    <li class="dropdown">
+      <a href="original-projects.html" class="active">Original Projects ▾</a>
+
+      <ul class="dropdown-menu">
+        <li><a href="ash3.html">I'm Here Now</a></li>
+        <li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
+        <li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
+        <li><a href="2024-musical-odyssey.html" class="active">2024: A Musical Odyssey</a></li>
+
+
+      </ul>
+    </li>
+
+   <li><a href="remix-projects.html" class="active"> Remix Projects</a></li>
+   <li><a href="Remixes.html">Singles & Remixes</a></li>
+
+  </ul>
+</nav>
+
+<main>
+
+<h1 class="title">Original Projects</h1>
+
+<p class="description">
+Discover CJF1986's original collaborations featuring talented independent artists.
+These projects showcase original songwriting, boom bap production, and creative partnerships
+that highlight the evolution of CJF Music beyond remix albums.
+</p>
+
+<div class="album-grid">
+
+  <div class="album">
+    <a href="ash3.html">
+      <img src="images/ASH3.png" alt="I'm Here Now">
+    </a>
+    <h3>A.S.H.3 – I'm Here Now</h3>
+  </div>
+
+  <div class="album">
+    <a href="kquing-liv.html">
+      <img src="images/BFATH-coverart.png" alt="Baddie From Around The Way">
+    </a>
+    <h3>KQuing Liv – Baddie From Around The Way</h3>
+  </div>
+
+  <div class="album">
+    <a href="cjf-radiovol3.html">
+      <img src="images/CJF Radio Vol 3-Cover.png" alt="CJF Radio Series">
+    </a>
+    <h3>CJF Radio Vol 3</h3>
+  </div>
+
+   <div class="album">
+    <a href="2024-musical-odyssey.html">
+      <img src="images/2024 A Musicial Odyssy.jpeg" alt="CJF Radio Series">
+    </a>
+    <h3>2024 A Musicial Odyssy</h3>
+
+
+
+</div>
+
+
+
+</main>
+
+<footer>
+  <p>&copy; 2026 CJF Music. All rights reserved.</p>
+  <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
+  <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
+</footer>
+
+<!-- JS (FULL FIXED VERSION) -->
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+// Mobile menu toggle
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Dropdowns (mobile only behavior)
+const dropdowns = document.querySelectorAll(".dropdown-toggle");
+
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener("click", function(e) {
+
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+
+      const parent = this.parentElement;
+
+      // close other dropdowns
+      document.querySelectorAll(".dropdown").forEach(item => {
+        if (item !== parent) {
+          item.classList.remove("open");
+        }
+      });
+
+      // toggle current
+      parent.classList.toggle("open");
+    }
+
+  });
+});
+</script>
+
+</body>
+</html>

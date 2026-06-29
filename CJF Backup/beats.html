@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CJF Beats</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar">
+
+  <a href="index.html" class="logo">
+    <img src="images/CJF Music Logo.png" alt="CJF1986 Logo">
+  </a>
+
+  <button class="menu-toggle" aria-label="Toggle navigation">
+    ☰
+  </button>
+
+  <ul class="nav-links">
+
+    <li><a href="index.html">Home</a></li>
+
+    <li><a href="beats.html" class="active">Beats</a></li>
+
+    <!-- DROPDOWN 1 -->
+    <li class="dropdown">
+
+      <a href="jayz-remixes.html" class="dropdown-toggle">
+        Jay-Z Remixes ▾
+      </a>
+
+      <ul class="dropdown-menu">
+        <li><a href="jayz-remixes.html">All Jay-Z Projects</a></li>
+        <li><a href="theblendprint.html">The Blendprint</a></li>
+        <li><a href="theblackblend.html">The Black Blend</a></li>
+        <li><a href="american-blend.html">The American Blend</a></li>
+        <li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
+      </ul>
+
+    </li>
+
+    <!-- DROPDOWN 2 -->
+    <li class="dropdown">
+
+      <a href="#" class="dropdown-toggle">
+        Original Projects ▾
+      </a>
+
+      <ul class="dropdown-menu">
+        <li><a href="original-projects.html">All Original Projects</a></li>
+        <li><a href="ash3.html">I'm Here Now</a></li>
+        <li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
+        <li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
+        <li><a href="2024-musical-odyssey.html">2024: A Musical Odyssey</a></li>
+      </ul>
+    <li><a href="remix-projects.html">Remix Projects</a></li>
+
+    <li><a href="Remixes.html">Singles & Remixes</a></li>
+
+  </ul>
+</nav>
+
+<main>
+
+<main>
+
+  <section class="page-header">
+
+    <h1 class="title"> Beats</h1>
+
+    <p class="description">
+      Download free boom bap instrumentals produced by CJF1986.
+      If you record a song using one of these beats, I'd love to hear it.
+      For exclusive licenses, custom production, or collaborations,
+      get in touch through email
+    </p>
+
+    
+
+  </section>
+
+  <div class="album-grid">
+
+    <div class="album">
+      <img src="images/CJF Music Logo.png" alt="White Raw">
+      <h3>White Raw</h3>
+
+      <audio controls>
+        <source src="beats/White Raw.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="https://drive.google.com/uc?export=download&id=1U1Th9Wl0HyYtCiCH_mNZla4qzzXmA0GB" download>
+        <button>Download</button>
+      </a>
+    </div>
+
+    <div class="album">
+      <img src="images/CJF Music Logo.png" alt="Paul Bearer">
+      <h3>Paul Bearer</h3>
+
+      <audio controls>
+        <source src="beats/Paul Bearer.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="https://drive.google.com/uc?export=download&id=1C1RQj8k51QOcqdud3kuLy7avYUIrunlw" download>
+        <button>Download</button>
+      </a>
+    </div>
+
+    <div class="album">
+      <img src="images/CJF Music Logo.png" alt="Street Author">
+      <h3>Street Author</h3>
+
+      <audio controls>
+        <source src="beats/Street Author.mp3" type="audio/mpeg">
+      </audio>
+
+      <a href="https://drive.google.com/uc?export=download&id=1n7b0jZI7sk4s5zY2AnTzuaWiKFRKXgsb" download>
+        <button>Download</button>
+      </a>
+    </div>
+
+    <!-- Add the rest of your beats here -->
+
+  </div>
+
+  <section class="description">
+
+    <h2>Need Exclusive Production?</h2>
+
+    <p>
+      Looking for a custom beat, exclusive license, or a full production
+      for your next project? I'm always open to collaborating with artists
+      who appreciate classic East Coast hip-hop.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="https://linktr.ee/cjfernanders1986" target="_blank">
+        <button>Beat Catalog</button>
+      </a>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+<footer>
+  <p>&copy; 2026 CJF Music. All rights reserved.</p>
+  <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
+  <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
+</footer>
+<!-- JS (FULL FIXED VERSION) -->
+<script>
+const toggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+// Mobile menu toggle
+toggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// Dropdowns (mobile only behavior)
+const dropdowns = document.querySelectorAll(".dropdown-toggle");
+
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener("click", function(e) {
+
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+
+      const parent = this.parentElement;
+
+      // close other dropdowns
+      document.querySelectorAll(".dropdown").forEach(item => {
+        if (item !== parent) {
+          item.classList.remove("open");
+        }
+      });
+
+      // toggle current
+      parent.classList.toggle("open");
+    }
+
+  });
+});
+</script>
+
+</body>
+</html>

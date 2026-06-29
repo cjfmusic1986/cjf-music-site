@@ -730,14 +730,12 @@ footer a:hover {
 }
 
 }
+.hero {
+  padding: 80px 20px;
+}
 
-/* =========================
-   MOBILE HERO SPACING
-========================= */
 @media (max-width: 768px) {
-
   .hero {
-    padding-top: 120px;
+    padding: 180px 20px 80px;
   }
-
 }
