@@ -1,4 +1,0 @@
-cd "C:\Users\13478\Desktop\CJF Website"
-git add .
-git commit -m "Updated website content"
-git push origin master
