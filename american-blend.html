@@ -1,77 +1,61 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jay-Z – The American Blend</title>
-  <link rel="stylesheet" href="styles.css"/>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Jay-Z – The American Blend</title>
+<link href="styles.css" rel="stylesheet"/>
+</meta><style>
+.blend-player{max-width:800px;margin:35px auto;padding:24px;border-radius:18px;background:#151515;color:#f8f8f8;border:1px solid #363636;box-shadow:0 12px 35px #0005;font-family:Arial,sans-serif}
+.blend-now{display:flex;align-items:center;gap:20px}.blend-now img{width:116px;height:116px;object-fit:cover;border-radius:10px}.blend-info{min-width:0}.blend-eyebrow{font-size:11px;letter-spacing:2px;color:#e8bb64;font-weight:700}.blend-info h2{font-size:clamp(20px,4vw,29px);margin:10px 0 5px;color:white}.blend-info p{margin:0;color:#bbb;font-size:14px}
+.blend-controls{display:flex;justify-content:center;align-items:center;gap:24px;margin:23px 0 14px}.blend-controls button{background:transparent;color:#fff;border:0;cursor:pointer;font-size:26px;padding:9px}.blend-controls .blend-main-play{width:62px;height:62px;border-radius:50%;background:#e6b55e;color:#111;font-size:24px}.blend-controls button:hover{opacity:.8}
+.blend-seek{display:flex;gap:12px;align-items:center;font-size:12px;color:#bbb}.blend-seek input{flex:1;min-width:0}.blend-player input[type=range]{accent-color:#e6b55e;cursor:pointer}.blend-volume{display:flex;justify-content:flex-end;gap:12px;align-items:center;font-size:12px;color:#bbb;margin:13px 0 20px}.blend-volume input{width:120px}.blend-track-heading{border-top:1px solid #383838;padding-top:20px;margin:0 0 10px;color:#fff}.blend-tracks{padding:0;margin:0;list-style:none}.blend-tracks li{margin:0;border-bottom:1px solid #2c2c2c}.blend-track-button{display:flex;width:100%;gap:14px;align-items:center;padding:14px 10px;border:0;background:transparent;color:#eee;text-align:left;cursor:pointer;font:inherit}.blend-track-button:hover,.blend-track-button.active{background:#29241c}.blend-track-button.active{color:#e8bb64}.blend-track-number{width:22px;color:#999;font-size:13px}.blend-track-name{flex:1}.blend-track-icon{font-size:15px}.blend-error{color:#ffb4a8;min-height:1em;font-size:13px}
+@media(max-width:520px){.blend-player{padding:16px}.blend-now img{width:88px;height:88px}.blend-volume{justify-content:center}}
+</style></head>
 <body>
-
 <nav class="navbar">
-
-  <a href="index.html" class="logo">
-    <img src="images/CJF Music Logo.png" alt="CJF1986 Logo">
-  </a>
-
-  <button class="menu-toggle" aria-label="Toggle navigation">
+<a class="logo" href="index.html">
+<img alt="CJF1986 Logo" src="images/CJF Music Logo.png"/>
+</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
     ☰
   </button>
-
-
-  <ul class="nav-links">
-
-
-    <li><a href="index.html">Home</a></li>
-
-    <li><a href="beats.html">Beats</a></li>
-
-
-       <!-- DROPDOWN 1 -->
-    <li class="dropdown">
-
-      <a href="jayz-remixes.html" class="dropdown-toggle">
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="beats.html">Beats</a></li>
+<!-- DROPDOWN 1 -->
+<li class="dropdown">
+<a class="dropdown-toggle" href="jayz-remixes.html">
         Jay-Z Remixes ▾
       </a>
-
-      <ul class="dropdown-menu">
-        <li><a href="jayz-remixes.html">All Jay-Z Projects</a></li>
-        <li><a href="theblendprint.html">The Blendprint</a></li>
-        <li><a href="theblackblend.html">The Black Blend</a></li>
-        <li><a href="american-blend.html">The American Blend</a></li>
-        <li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
-      </ul>
-
-    </li>
-
-    <!-- DROPDOWN 2 -->
-    <li class="dropdown">
-
-      <a href="#" class="dropdown-toggle">
+<ul class="dropdown-menu">
+<li><a href="jayz-remixes.html">All Jay-Z Projects</a></li>
+<li><a href="theblendprint.html">The Blendprint</a></li>
+<li><a href="theblackblend.html">The Black Blend</a></li>
+<li><a href="american-blend.html">The American Blend</a></li>
+<li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
+</ul>
+</li>
+<!-- DROPDOWN 2 -->
+<li class="dropdown">
+<a class="dropdown-toggle" href="#">
         Original Projects ▾
       </a>
-
-      <ul class="dropdown-menu">
-        <li><a href="original-projects.html">All Original Projects</a></li>
-        <li><a href="ash3.html">I'm Here Now</a></li>
-        <li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
-        <li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
-        <li><a href="2024-musical-odyssey.html">2024: A Musical Odyssey</a></li>
-      </ul>
-
-    </li>
-
-    <li><a href="remix-projects.html"> Remix Projects</a></li>
-
-    <li><a href="Remixes.html">Singles & Remixes</a></li>
-
-  </ul>
+<ul class="dropdown-menu">
+<li><a href="original-projects.html">All Original Projects</a></li>
+<li><a href="ash3.html">I'm Here Now</a></li>
+<li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
+<li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
+<li><a href="2024-musical-odyssey.html">2024: A Musical Odyssey</a></li>
+</ul>
+</li>
+<li><a href="remix-projects.html"> Remix Projects</a></li>
+<li><a href="Remixes.html">Singles &amp; Remixes</a></li>
+</ul>
 </nav>
-
 <main>
-
 <h1 class="title">Jay-Z – The American Blend</h1>
-
 <p class="description">
 <strong>The American Blend</strong> is CJF1986's complete remix of
 Jay-Z's critically acclaimed <em>American Gangster</em>. Every record
@@ -80,168 +64,64 @@ boom bap drums, and cinematic production inspired by the golden era of
 hip hop while preserving the storytelling and atmosphere of the original
 album.
 </p>
-
 <p class="description">
 From the opening moments of <em>Pray</em> through the title track
 <em>American Gangster</em>, this project reimagines one of Jay-Z's most
 mature bodies of work with fresh instrumentation and a classic East
 Coast sound that feels both nostalgic and timeless.
 </p>
-
 <div class="album-cover">
-    <img src="images/The American Blend-cover.png"
-         alt="The American Blend">
+<img alt="The American Blend" src="images/The American Blend-cover.png"/>
 </div>
-
-<section class="tracklist">
-
-<ol>
-
-
-
-<li>
-Pray
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Pray.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-American Dreamin'
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/American Dreamin'.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Hello Brooklyn 2.0 (feat. Lil Wayne)
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Hello Brooklyn 2.0.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-No Hook
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/No Hook.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Roc Boys (And the Winner Is)...
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Roc Boys (And The Winner Is).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Sweet
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Sweet.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-I Know (feat. Pharrell)
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/I Know.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Party Life
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Party Life.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Ignorant Shit (feat. Beanie Sigel)
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Ignorant Sh t.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Say Hello
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Say Hello.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Success (feat. Nas)
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Success.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Fallin'
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Fallin'.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-Blue Magic (feat. Pharrell)
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/Blue Magic.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>
-American Gangster
-<audio controls>
-<source src="JAŸ-Z - The American Blend (2026)/American Gangster.mp3" type="audio/mpeg">
-</audio>
-</li>
-
-</ol>
-
+<section aria-label="The Blendprint album player" class="blend-player">
+<div class="blend-now">
+<img alt="The Blendprint album cover" id="blend-art" src="images/The American Blend-cover.png"/>
+<div class="blend-info"><span class="blend-eyebrow">THE AMERICAN BLEND • 14 TRACKS</span><h2 id="blend-title">Pray</h2><p>Jay-Z • CJF1986 Remix</p></div>
+</div>
+<audio id="blend-audio" preload="metadata"></audio>
+<div class="blend-controls">
+<button aria-label="Previous track" id="blend-prev" type="button">⏮</button>
+<button aria-label="Play" class="blend-main-play" id="blend-play" type="button">▶</button>
+<button aria-label="Next track" id="blend-next" type="button">⏭</button>
+</div>
+<div class="blend-seek"><span id="blend-elapsed">0:00</span><input aria-label="Seek through track" id="blend-progress" max="100" min="0" type="range" value="0"/><span id="blend-duration">0:00</span></div>
+<div class="blend-volume"><label for="blend-volume">Volume</label><input id="blend-volume" max="100" min="0" type="range" value="80"/></div>
+<p aria-live="polite" class="blend-error" id="blend-error" role="status"></p>
+<h3 class="blend-track-heading">Tracklist</h3>
+<ol class="blend-tracks" id="blend-tracklist"></ol>
 </section>
-
 <div class="download-wrapper">
-  <div class="download-button">
-    <a href="https://drive.google.com/uc?export=download&id=1FbU_vzKhTLMNkotk1bCfv9OqpPk9t2VT"
-       target="_blank">
-      <button>Download Album</button>
-    </a>
-  </div>
+<div class="download-button">
+<a href="https://drive.google.com/uc?export=download&amp;id=1FbU_vzKhTLMNkotk1bCfv9OqpPk9t2VT" target="_blank">
+<button>Download Album</button>
+</a>
 </div>
-
+</div>
 <div class="album-navigation">
-
 <a href="theblackblend.html">
 <button>← Previous Remix</button>
 </a>
-
 <a href="jayz-remixes.html">
 <button>Back to Series</button>
 </a>
-
 <a href="soul-of-hov.html">
 <button>Next Remix →</button>
 </a>
-
 </div>
-
 </main>
-
 <footer>
-  <p>&copy; 2026 CJF Music. All rights reserved.</p>
-  <p>Contact:
+<p>© 2026 CJF Music. All rights reserved.</p>
+<p>Contact:
     <a href="mailto:cjfproductions1986@gmail.com">
       cjfproductions1986@gmail.com
     </a>
-  </p>
-  <p>
-    <a href="https://linktr.ee/cjfernanders1986" target="_blank">
+</p>
+<p>
+<a href="https://linktr.ee/cjfernanders1986" target="_blank">
       Linktree
     </a>
-  </p>
+</p>
 </footer>
-
 <!-- JS (FULL FIXED VERSION) -->
 <script>
 const toggle = document.querySelector(".menu-toggle");
@@ -277,6 +157,131 @@ dropdowns.forEach(dropdown => {
   });
 });
 </script>
-
-</body>
+<script>
+(() => {
+  const tracks = [
+  {
+    "title": "Pray",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Pray.mp3"
+  },
+  {
+    "title": "American Dreamin'",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/American Dreamin'.mp3"
+  },
+  {
+    "title": "Hello Brooklyn 2.0 (feat. Lil Wayne)",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Hello Brooklyn 2.0.mp3"
+  },
+  {
+    "title": "No Hook",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/No Hook.mp3"
+  },
+  {
+    "title": "Roc Boys (And the Winner Is)...",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Roc Boys (And The Winner Is).mp3"
+  },
+  {
+    "title": "Sweet",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Sweet.mp3"
+  },
+  {
+    "title": "I Know (feat. Pharrell)",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/I Know.mp3"
+  },
+  {
+    "title": "Party Life",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Party Life.mp3"
+  },
+  {
+    "title": "Ignorant Shit (feat. Beanie Sigel)",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Ignorant Sh t.mp3"
+  },
+  {
+    "title": "Say Hello",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Say Hello.mp3"
+  },
+  {
+    "title": "Success (feat. Nas)",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Success.mp3"
+  },
+  {
+    "title": "Fallin'",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Fallin'.mp3"
+  },
+  {
+    "title": "Blue Magic (feat. Pharrell)",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/Blue Magic.mp3"
+  },
+  {
+    "title": "American Gangster",
+    "artist": "Jay-Z • CJF1986 Remix",
+    "src": "JAŸ-Z - The American Blend (2026)/American Gangster.mp3"
+  }
+];
+  const byId = id => document.getElementById(id);
+  const audio = byId('blend-audio');
+  const play = byId('blend-play');
+  const progress = byId('blend-progress');
+  const list = byId('blend-tracklist');
+  const error = byId('blend-error');
+  let current = 0;
+  const format = seconds => Number.isFinite(seconds) ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}` : '0:00';
+  function draw() {
+    list.replaceChildren();
+    tracks.forEach((track, i) => {
+      const li = document.createElement('li');
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'blend-track-button' + (i === current ? ' active' : '');
+      button.setAttribute('aria-label', 'Play ' + track.title);
+      const number = document.createElement('span'); number.className = 'blend-track-number'; number.textContent = String(i + 1).padStart(2, '0');
+      const name = document.createElement('span'); name.className = 'blend-track-name'; name.textContent = track.title;
+      const icon = document.createElement('span'); icon.className = 'blend-track-icon'; icon.textContent = i === current && !audio.paused ? '♫' : '▶';
+      button.append(number, name, icon);
+      button.addEventListener('click', () => load(i, true));
+      li.append(button); list.append(li);
+    });
+  }
+  async function start() {
+    try { error.textContent = ''; await audio.play(); }
+    catch (e) { error.textContent = 'This track could not play. Check that its MP3 file is uploaded at the correct path.'; console.warn(e); }
+  }
+  function load(i, autoplay = false) {
+    current = (i + tracks.length) % tracks.length;
+    audio.src = tracks[current].src;
+    byId('blend-title').textContent = tracks[current].title;
+    byId('blend-elapsed').textContent = '0:00';
+    byId('blend-duration').textContent = '0:00';
+    progress.value = 0; error.textContent = '';
+    draw();
+    if (autoplay) start();
+  }
+  play.addEventListener('click', () => audio.paused ? start() : audio.pause());
+  byId('blend-prev').addEventListener('click', () => audio.currentTime > 3 ? audio.currentTime = 0 : load(current - 1, true));
+  byId('blend-next').addEventListener('click', () => load(current + 1, true));
+  audio.addEventListener('play', () => { play.textContent = '⏸'; play.setAttribute('aria-label', 'Pause'); draw(); });
+  audio.addEventListener('pause', () => { play.textContent = '▶'; play.setAttribute('aria-label', 'Play'); draw(); });
+  audio.addEventListener('loadedmetadata', () => byId('blend-duration').textContent = format(audio.duration));
+  audio.addEventListener('timeupdate', () => { byId('blend-elapsed').textContent = format(audio.currentTime); if (Number.isFinite(audio.duration) && audio.duration > 0) progress.value = audio.currentTime / audio.duration * 100; });
+  progress.addEventListener('input', () => { if (Number.isFinite(audio.duration) && audio.duration > 0) audio.currentTime = audio.duration * Number(progress.value) / 100; });
+  byId('blend-volume').addEventListener('input', e => audio.volume = Number(e.target.value) / 100);
+  audio.addEventListener('ended', () => load(current + 1, true));
+  audio.addEventListener('error', () => { error.textContent = 'Audio unavailable. Verify the MP3 filename and folder on your website.'; });
+  audio.volume = .8;
+  load(0);
+})();
+</script></body>
 </html>
