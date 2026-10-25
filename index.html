@@ -56,7 +56,7 @@
       </ul>
 
     </li>
-<li><a href="remix-projects.html" class="active"> Remix Projects</a></li>
+<li><a href="remix-projects.html"> Remix Projects</a></li>
 
 
     <li><a href="Remixes.html">Singles & Remixes</a></li>
@@ -162,6 +162,10 @@
 
 </div>
 
+<section class="cjf-featured-album" aria-labelledby="cjf-album-heading">
+  <div class="cjf-featured-head"><img src="images/CJF Music Logo.png" alt="CJF Music" /><div><span class="cjf-kicker">CJF MUSIC • FEATURED PLAYER</span><h2 id="cjf-album-heading">Listen to CJF1986</h2><p>Listen to featured CJF1986 beats. Select a track below to play.</p><button id="cjf-play-album">▶ Play tracks</button></div></div>
+  <div id="cjf-tracklist" class="cjf-tracklist" aria-label="Tracks"></div>
+</section>
 <section class="video-container">
   <h2>Latest Video</h2>
 
@@ -198,7 +202,6 @@
   </p>
 
 </section>
-</section>
 <section class="featured-beat">
 
 <section class="beats-section">
@@ -218,7 +221,7 @@
 
 
 
-    </main>
+
     
 
     
@@ -265,5 +268,22 @@ dropdowns.forEach(dropdown => {
 });
 </script>
 
+
+<!-- CJF persistent-on-page player; edit js/music-player.js to add MP3 URLs -->
+<div class="cjf-player" id="cjf-player" aria-label="CJF music player">
+  <img class="cjf-player-art" id="cjf-player-art" src="images/CJF Music Logo.png" alt="Current track cover">
+  <div class="cjf-player-meta"><strong id="cjf-player-title">Choose a track</strong><small>CJF1986</small></div>
+  <div class="cjf-player-center">
+    <div class="cjf-player-buttons">
+      <button id="cjf-prev" aria-label="Previous track">⏮</button>
+      <button id="cjf-play" aria-label="Play">▶</button>
+      <button id="cjf-next" aria-label="Next track">⏭</button>
+    </div>
+    <div class="cjf-player-seek"><span id="cjf-elapsed">0:00</span><input id="cjf-seek" type="range" min="0" max="100" value="0" aria-label="Seek"><span id="cjf-duration">0:00</span></div>
+  </div>
+  <label class="cjf-player-volume">🔊 <input id="cjf-volume" type="range" min="0" max="100" value="80" aria-label="Volume"></label>
+  <audio id="cjf-audio" preload="metadata"></audio>
+</div>
+<script src="js/music-player.js" defer></script>
 </body>
 </html>

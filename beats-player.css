@@ -1,0 +1,20 @@
+/* Add-on styles: keeps your existing styles.css unchanged */
+body { padding-bottom: 110px; }
+.cjf-player { position:fixed; bottom:0; left:0; width:100%; z-index:2000; background:#151515; border-top:2px solid #ffa500; color:#fff; display:flex; align-items:center; justify-content:space-between; gap:20px; padding:12px 24px; font-family:Arial,sans-serif; box-shadow:0 -6px 25px #0009; }
+.cjf-player-info { width:25%; min-width:0; display:flex; align-items:center; gap:12px; }
+.cjf-player-info img { width:52px; height:52px; object-fit:cover; border-radius:5px; }
+.cjf-player-info div { display:flex; flex-direction:column; min-width:0; }
+.cjf-player-info strong { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:14px; }
+.cjf-player-info small { color:#aaa; }
+.cjf-player-center { flex:1; max-width:600px; }
+.cjf-player-buttons { display:flex; justify-content:center; gap:24px; }
+.cjf-player-buttons button { background:transparent; border:0; color:white; font-size:22px; cursor:pointer; }
+.cjf-player-buttons button:hover { color:#ffa500; }
+.cjf-player-seek { display:flex; align-items:center; gap:10px; font-size:12px; }
+.cjf-player-seek input { flex:1; min-width:0; }
+.cjf-player-volume { display:flex; align-items:center; gap:10px; font-size:12px; }
+.cjf-player input[type=range] { accent-color:#ffa500; cursor:pointer; }
+.album .cjf-card-play { background:#ffa500; color:#111; margin:10px 0; }
+.album .cjf-card-play:hover { background:#ffbf47; }
+.album.cjf-active { border-color:#ffa500; }
+@media(max-width:700px) { body { padding-bottom:155px; } .cjf-player { flex-wrap:wrap; padding:10px 14px; gap:8px; } .cjf-player-info { width:100%; } .cjf-player-center { flex-basis:100%; max-width:none; } .cjf-player-volume { display:none; } }

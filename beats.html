@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CJF Beats</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="beats-player.css">
 </head>
 <body>
 
@@ -61,8 +62,6 @@
 
   </ul>
 </nav>
-
-<main>
 
 <main>
 
@@ -188,7 +187,19 @@ dropdowns.forEach(dropdown => {
 
   });
 });
+
+
 </script>
 
+
+<!-- CJF fixed music player -->
+<div class="cjf-player" role="region" aria-label="Music player">
+  <div class="cjf-player-info"><img id="cjf-track-cover" alt="Current track artwork" src="images/CJF Music Logo.png"><div><strong id="cjf-track-title">Select a beat</strong><small>CJF1986</small></div></div>
+  <div class="cjf-player-center"><div class="cjf-player-buttons"><button id="cjf-prev" aria-label="Previous track">⏮</button><button id="cjf-toggle" aria-label="Play">▶</button><button id="cjf-next" aria-label="Next track">⏭</button></div><div class="cjf-player-seek"><span id="cjf-elapsed">0:00</span><input id="cjf-seek" aria-label="Seek" type="range" min="0" max="100" value="0"><span id="cjf-duration">0:00</span></div></div>
+  <label class="cjf-player-volume">Volume <input id="cjf-volume" type="range" min="0" max="100" value="80"></label>
+</div>
+<audio id="cjf-audio" preload="metadata"></audio>
+<script src="js/beats-player.js" defer></script>
 </body>
+
 </html>
