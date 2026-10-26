@@ -9,7 +9,7 @@
 .blend-player{max-width:800px;margin:35px auto;padding:24px;border-radius:18px;background:#151515;color:#f8f8f8;border:1px solid #363636;box-shadow:0 12px 35px #0005;font-family:Arial,sans-serif}
 .blend-now{display:flex;align-items:center;gap:20px}.blend-now img{width:116px;height:116px;object-fit:cover;border-radius:10px}.blend-info{min-width:0}.blend-eyebrow{font-size:11px;letter-spacing:2px;color:#e8bb64;font-weight:700}.blend-info h2{font-size:clamp(20px,4vw,29px);margin:10px 0 5px;color:white}.blend-info p{margin:0;color:#bbb;font-size:14px}
 .blend-controls{display:flex;justify-content:center;align-items:center;gap:24px;margin:23px 0 14px}.blend-controls button{background:transparent;color:#fff;border:0;cursor:pointer;font-size:26px;padding:9px}.blend-controls .blend-main-play{width:62px;height:62px;border-radius:50%;background:#e6b55e;color:#111;font-size:24px}.blend-controls button:hover{opacity:.8}
-.blend-seek{display:flex;gap:12px;align-items:center;font-size:12px;color:#bbb}.blend-seek input{flex:1;min-width:0}.blend-player input[type=range]{accent-color:#e6b55e;cursor:pointer}.blend-volume{display:flex;justify-content:flex-end;gap:12px;align-items:center;font-size:12px;color:#bbb;margin:13px 0 20px}.blend-volume input{width:120px}.blend-track-heading{border-top:1px solid #383838;padding-top:20px;margin:0 0 10px;color:#fff}.blend-tracks{padding:0;margin:0;list-style:none}.blend-tracks li{margin:0;border-bottom:1px solid #2c2c2c}.blend-track-button{display:flex;width:100%;gap:14px;align-items:center;padding:14px 10px;border:0;background:transparent;color:#eee;text-align:left;cursor:pointer;font:inherit}.blend-track-button:hover,.blend-track-button.active{background:#29241c}.blend-track-button.active{color:#e8bb64}.blend-track-number{width:22px;color:#999;font-size:13px}.blend-track-name{flex:1}.blend-track-icon{font-size:15px}.blend-error{color:#ffb4a8;min-height:1em;font-size:13px}
+.blend-seek{display:flex;gap:12px;align-items:center;font-size:12px;color:#bbb}.blend-seek input{flex:1;min-width:0}.blend-player input[type=range]{accent-color:#e6b55e;cursor:pointer}.blend-volume{display:flex;justify-content:flex-end;gap:12px;align-items:center;font-size:12px;color:#bbb;margin:13px 0 20px}.blend-volume input{width:120px}.blend-track-heading{border-top:1px solid #383838;padding-top:20px;margin:0 0 10px;color:#fff}.blend-tracks{padding:0;margin:0;list-style:none}.blend-tracks li{margin:0;border-bottom:1px solid #2c2c2c}.blend-track-button{display:flex;width:100%;gap:14px;align-items:center;padding:14px 10px;border:0;background:transparent;color:#eee;text-align:left;cursor:pointer;font:inherit}.blend-track-button:hover,.blend-track-button.active{background:#29241c}.blend-track-button.active{color:#e8bb64}.blend-track-number{width:22px;color:#999;font-size:13px}.blend-track-name{flex:1}.blend-track-icon{font-size:19px;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#e6b55e;color:#111;font-weight:bold;flex-shrink:0}.blend-track-button.active .blend-track-icon{background:#f4ca7e;color:#111}.blend-error{color:#ffb4a8;min-height:1em;font-size:13px}
 @media(max-width:520px){.blend-player{padding:16px}.blend-now img{width:88px;height:88px}.blend-volume{justify-content:center}}
 </style>
 </head>
@@ -262,12 +262,15 @@ dropdowns.forEach(dropdown => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'blend-track-button' + (i === current ? ' active' : '');
-      button.setAttribute('aria-label', 'Play ' + track.title);
+      button.setAttribute('aria-label', (i === current && !audio.paused ? 'Pause ' : 'Play ') + track.title);
       const number = document.createElement('span'); number.className = 'blend-track-number'; number.textContent = String(i + 1).padStart(2, '0');
       const name = document.createElement('span'); name.className = 'blend-track-name'; name.textContent = track.title;
-      const icon = document.createElement('span'); icon.className = 'blend-track-icon'; icon.textContent = i === current && !audio.paused ? '♫' : '▶';
+      const icon = document.createElement('span'); icon.className = 'blend-track-icon'; icon.textContent = i === current && !audio.paused ? '⏸' : '▶';
       button.append(number, name, icon);
-      button.addEventListener('click', () => load(i, true));
+      button.addEventListener('click', () => {
+        if (i === current) { audio.paused ? start() : audio.pause(); }
+        else { load(i, true); }
+      });
       li.append(button); list.append(li);
     });
   }
