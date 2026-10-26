@@ -1,448 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Remix Projects</title>
-<link rel="stylesheet" href="styles.css">
-</head>
 
-<body>
-
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Remix Projects | CJF Music</title><meta content="Explore remix albums and projects produced by CJF1986. Listen to previews and download albums." name="description"/><link href="styles.css" rel="stylesheet"/><style>
+:root{color-scheme:dark}body{background:#0d0d0e;color:#f5f0e7} .remix-hub{--gold:#e6b55e;--muted:#a7a3a0;--line:#37302a;max-width:1240px;margin:0 auto;padding:36px 22px 90px;font-family:Arial,Helvetica,sans-serif;box-sizing:border-box}.remix-hub *{box-sizing:border-box}.remix-hub button,.remix-hub input{font:inherit}.remix-hub button{cursor:pointer}.remix-hub a{text-decoration:none}.hub-kicker{color:var(--gold);text-transform:uppercase;font-weight:800;font-size:12px;letter-spacing:2.4px}.hub-head{margin:14px 0 16px;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:clamp(32px,4.3vw,48px);font-weight:700;line-height:1.16;letter-spacing:-0.8px;text-align:center}.hub-lede{color:#cfc9c1;max-width:800px;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.75;font-size:clamp(16px,1.5vw,18px);margin:0 0 34px;text-align:left}.featured{background:linear-gradient(125deg,#282015,#171719 60%,#121214);border:1px solid #5a4329;border-radius:22px;padding:26px;display:grid;grid-template-columns:minmax(170px,310px) 1fr;align-items:center;gap:32px;box-shadow:0 15px 35px #0005}.featured img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;box-shadow:0 10px 30px #0009}.featured h2{font-size:clamp(25px,4vw,43px);line-height:1.15;color:white;margin:12px 0}.featured p{color:#c9c1b4;line-height:1.65}.hub-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:22px}.hub-btn{border-radius:999px;padding:11px 19px;min-height:43px;font-size:13px;font-weight:750;border:1px solid #a78144;background:var(--gold);color:#17110a;display:inline-flex;align-items:center;justify-content:center;gap:8px}.hub-btn.secondary{background:transparent;color:#f2d29b;border-color:#81643d}.hub-btn:hover{filter:brightness(1.1)}.catalog-head{margin:48px 0 19px;display:flex;justify-content:space-between;align-items:end;gap:14px;flex-wrap:wrap}.catalog-head h2{font-size:clamp(24px,3vw,34px);margin:0 0 7px;color:white}.catalog-head p{margin:0;color:#a9a39d}.catalog-count{font-size:13px;color:#d9b779}.catalog-tools{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:0 0 23px}.catalog-search{flex:1 1 290px;background:#1c1c1f;color:white;border:1px solid #4a4239;border-radius:12px;padding:14px 17px;min-width:0;outline-offset:3px}.catalog-search:focus{outline:2px solid #e6b55e}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter-btn{background:#242326;border:1px solid #454044;color:#d5d1cb;border-radius:999px;padding:10px 15px;font-size:13px;font-weight:700}.filter-btn[aria-pressed=true]{background:#e6b55e;border-color:#e6b55e;color:#15100a}.album-grid-upgraded{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}.album-card{min-width:0;border-radius:16px;background:#1a1a1d;border:1px solid #373332;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}.album-card:hover{transform:translateY(-3px);border-color:#9d7842}.album-art-wrap{position:relative;background:#121212}.album-art{display:block;width:100%;aspect-ratio:1;object-fit:cover}.album-tag{position:absolute;top:11px;left:11px;background:#111d;color:#eac78a;border:1px solid #8d693d88;border-radius:99px;padding:6px 10px;font-size:11px;font-weight:700}.album-body{padding:17px;display:flex;flex-direction:column;gap:13px;flex:1}.album-body h3{color:white;font-size:16px;line-height:1.4;margin:0;min-height:45px}.album-controls{display:flex;align-items:center;gap:11px}.preview-play{width:44px;height:44px;min-width:44px;border-radius:50%;border:0;background:#e6b55e;color:#111;font-size:18px;display:grid;place-items:center}.preview-play:hover{background:#f3ca7f}.preview-play:focus-visible,.hub-btn:focus-visible,.filter-btn:focus-visible{outline:3px solid white;outline-offset:3px}.preview-status{min-width:0;color:#bcb6af;font-size:12px;line-height:1.3}.preview-status strong{display:block;color:#e9c68d;font-size:12px;margin-bottom:3px}.album-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}.album-links a{flex:1 1 auto;text-align:center;padding:10px 9px;border:1px solid #6c5534;color:#f1d6a8;border-radius:9px;font-size:12px;font-weight:750}.album-links a.download{background:#e6b55e;color:#19130c;border-color:#e6b55e}.album-links a:hover{filter:brightness(1.13)}.hub-empty{display:none;border:1px dashed #6a5942;border-radius:15px;padding:40px;text-align:center;color:#d6c4a7}.hub-empty.visible{display:block}.hub-note{margin:26px 0 0;color:#aaa29a;font-size:13px;line-height:1.6}.album-card[hidden]{display:none!important}@media(max-width:1050px){.album-grid-upgraded{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:750px){.featured{grid-template-columns:1fr}.featured img{max-width:290px}.album-grid-upgraded{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:470px){.remix-hub{padding:24px 14px 70px}.featured{padding:17px;gap:14px}.album-grid-upgraded{gap:12px}.album-body{padding:12px;gap:10px}.album-body h3{font-size:14px;min-height:58px}.album-tag{font-size:10px}.album-links a{font-size:11px}.preview-status{font-size:11px}}
+.remix-intro{width:100%;max-width:900px;margin:0 auto 38px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.remix-intro .hub-kicker{display:block;text-align:center;width:100%}.remix-intro .hub-head{width:100%;margin:14px auto 16px;text-align:center}.remix-intro .hub-lede{width:100%;max-width:760px;margin:0 auto;text-align:center;text-wrap:balance}@media(max-width:600px){.remix-intro{margin-bottom:30px}.remix-intro .hub-lede{font-size:16px;line-height:1.65}}</style></head><body>
 <nav class="navbar">
-
-  <a href="index.html" class="logo">
-    <img src="images/CJF Music Logo.png" alt="CJF1986 Logo">
-  </a>
-
-  <button class="menu-toggle" aria-label="Toggle navigation">
+<a class="logo" href="index.html">
+<img alt="CJF1986 Logo" src="images/CJF Music Logo.png"/>
+</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
     ☰
   </button>
-
-
-  <ul class="nav-links">
-
+<ul class="nav-links">
 <li><a href="index.html">Home</a></li>
-
 <li><a href="beats.html">Beats</a></li>
-
- <!-- DROPDOWN 1 -->
-    <li class="dropdown">
-
-      <a href="jayz-remixes.html" class="dropdown-toggle">
+<!-- DROPDOWN 1 -->
+<li class="dropdown">
+<a class="dropdown-toggle" href="jayz-remixes.html">
         Jay-Z Remixes ▾
       </a>
-
-      <ul class="dropdown-menu">
-        <li><a href="jayz-remixes.html">All Jay-Z Projects</a></li>
-        <li><a href="theblendprint.html">The Blendprint</a></li>
-        <li><a href="theblackblend.html">The Black Blend</a></li>
-        <li><a href="american-blend.html">The American Blend</a></li>
-        <li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
-      </ul>
-
-    </li>
-
-    <!-- DROPDOWN 2 -->
-    <li class="dropdown">
-
-      <a href="#" class="dropdown-toggle">
+<ul class="dropdown-menu">
+<li><a href="jayz-remixes.html">All Jay-Z Projects</a></li>
+<li><a href="theblendprint.html">The Blendprint</a></li>
+<li><a href="theblackblend.html">The Black Blend</a></li>
+<li><a href="american-blend.html">The American Blend</a></li>
+<li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
+</ul>
+</li>
+<!-- DROPDOWN 2 -->
+<li class="dropdown">
+<a class="dropdown-toggle" href="#">
         Original Projects ▾
       </a>
-
-      <ul class="dropdown-menu">
-        <li><a href="original-projects.html">All Original Projects</a></li>
-        <li><a href="ash3.html">I'm Here Now</a></li>
-        <li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
-        <li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
-        <li><a href="2024-musical-odyssey.html">2024: A Musical Odyssey</a></li>
-      </ul>
-
-    </li>
-
-<li><a href="remix-projects.html" class="active"> Remix Projects</a></li>
-
-<li><a href="Remixes.html">Singles & Remixes</a></li>
-
+<ul class="dropdown-menu">
+<li><a href="original-projects.html">All Original Projects</a></li>
+<li><a href="ash3.html">I'm Here Now</a></li>
+<li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
+<li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
+<li><a href="2024-musical-odyssey.html">2024: A Musical Odyssey</a></li>
+</ul>
+</li>
+<li><a class="active" href="remix-projects.html"> Remix Projects</a></li>
+<li><a href="Remixes.html">Singles &amp; Remixes</a></li>
 </ul>
 </nav>
-
-<main>
-
-<h1 class="title"> Remix Projects</h1>
-
-<p class="description">
-Explore CJF1986's remix catalog beyond the Jay-Z series. Each project features completely new production while paying tribute to some of hip-hop's greatest artists.
-</p>
-
-<div class="album-grid">
-
-<!-- The Long Night -->
-<div class="album">
-<a href="the-long-night.html">
-<img src="images/TLN.png" alt="The Long Night">
-</a>
-
-<h3>50 Cent - The Long Night</h3>
-
-<audio controls>
-<source src="music/TLN.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1LiLvrrQfJN_wgheLKixnIB2sbjNVjxVo">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- ReDAMNed -->
-<div class="album">
-<a href="redamned.html">
-<img src="images/ReDAMNed.png" alt="ReDAMNed">
-</a>
-
-<h3>Kendrick Lamar - ReDAMNed</h3>
-
-<audio controls>
-<source src="music/ReDAMNed.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1niWzq1CZWtFRLkvlcROal9H6bOcvTyaM">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- Light Years -->
-<div class="album">
-<a href="lightyears.html">
-<img src="images/Light Years_Cover.png" alt="Light Years">
-</a>
-
-<h3>Nas - Light Years</h3>
-
-<audio controls>
-<source src="music/Light Years_Final.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1U7chd-4-Mv3qEdFWlRnRjbat6GlK16zc">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- Reinvention Remix -->
-<div class="album">
-<img src="images/TRR - Cover Art.png" alt="The Reinvention Remix">
-</a>
-
-<h3>Ransom - The Reinvention Remix</h3>
-
-<audio controls>
-<source src="music/Ransom-Album_Seq.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=16cLDcY2j8uZFEnUkfOM2YlerHQB4P5Hs">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- Rapsody - Please Don't Cry (Side A) -->
-<div class="album">
-        <img src="images/Cover Art.png" alt="Please Don't Cry (Side A)">
-    </a>
-
-    <h3>Rapsody - Please Don't Cry (Side A)</h3>
-
-    <audio controls>
-        <source src="music/Album Sequnce.mp3" type="audio/mpeg">
-    </audio>
-
-    <a href="https://drive.google.com/uc?export=download&id=1zQHvpoSfgmi6s31VmQozP5D1Dzo9ktP5" download>
-        <button>Download Album</button>
-    </a>
-</div>
-
-<!-- Rapsody - Please Don't Cry (Side B) -->
-<div class="album">
-        <img src="images/Cover Art-2.png" alt="Please Don't Cry (Side B)">
-    </a>
-
-    <h3>Rapsody - Please Don't Cry (Side B)</h3>
-
-    <audio controls>
-        <source src="music/Side B.mp3" type="audio/mpeg">
-    </audio>
-
-    <a href="https://drive.google.com/uc?export=download&id=1pDEdPImunA5UjVclJY6AKmzwf0az5k47" download>
-        <button>Download Album</button>
-    </a>
-</div>
-
-<!-- Freddie Kane EP -->
-<div class="album">
-        <img src="images/Freddie Kane EP.jpeg" alt="Freddie Kane EP">
-    </a>
-
-    <h3>Freddie Gibbs - Freddie Kane EP</h3>
-
-    <audio controls>
-        <source src="music/FK-Full EP.mp3" type="audio/mpeg">
-    </audio>
-
-    <a href="https://drive.google.com/uc?export=download&id=1oWrhxFBYtUcjH-9TucRNCqItCjBY7Cp6" download>
-        <button>Download Album</button>
-    </a>
-</div>
-
-<!-- RJ Payne - The Payne Tape -->
-<div class="album">
-        <img src="images/RJ Payne.png" alt="RJ Payne - The Payne Tape">
-    </a>
-
-    <h3>RJ Payne - The Payne Tape</h3>
-
-    <audio controls>
-        <source src="music/The Payne Tape.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <a href="https://drive.google.com/uc?export=download&id=1Uzg3-FsCqcY4kWXCe62VCewSd_u7MDAw" download>
-        <button>Download Album</button>
-    </a>
-</div>
-
-<!-- CJF Radio, Vol. 1 -->
-<div class="album">
-    <a href="cjf-radio-vol1.html">
-        <img src="images/CJFR-COVER-min.png" alt="CJF Radio, Vol. 1">
-    </a>
-
-    <h3>CJF Music - CJF Radio, Vol. 1</h3>
-
-    <audio controls>
-        <source src="music/CJFR.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <a href="https://drive.google.com/uc?export=download&id=1C0uCs5VM0j0fToo4AypxKu7dZN014Rkg" download>
-        <button>Download Album</button>
-    </a>
-</div>
-
-<!-- CJF Radio, Vol. 2 -->
-<div class="album">
-    <a href="cjf-radio-vol2.html">
-        <img src="images/CJFRVol2-Cover.png" alt="CJF Radio, Vol. 2">
-    </a>
-
-    <h3>CJF Music - CJF Radio, Vol. 2</h3>
-
-    <audio controls>
-        <source src="music/CJFR-Sequnce.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <a href="https://drive.google.com/uc?export=download&id=1iFRjdNBQKDLBmgIwgnSM1OhImnTZHY9u" download>
-        <button>Download Album</button>
-    </a>
-</div>
-
-
-
-<!-- TMC -->
-<div class="album">
-<img src="images/nipsey.png" alt="TMC">
-</a>
-
-<h3>Nipsey Hussle - TMC: Bridges & Boulevards</h3>
-
-<audio controls>
-<source src="music/TMC-Full Album.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1rwVOHMcULStyz0mDAF8pYwAGOYBItMjV">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- Book of Nastradamus -->
-<div class="album">
-<img src="images/Nastradamus  cover art.png" alt="The Book Of Nastradamus">
-</a>
-
-<h3>Nas - The Book Of Nastradamus</h3>
-
-<audio controls>
-<source src="music/Nastradamus (2026).mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=11ZJqaS_M1OZ9cLMv1P-AhcngtRGnJ3_d">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- Thug Passion Project -->
-<div class="album">
-<img src="images/Thug Passion Project.jpg" alt="Thug Passion Project">
-</a>
-
-<h3>2Pac - Thug Passion Project</h3>
-
-<audio controls>
-<source src="music/Thug Passion Project.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1GNVVczVU1uq-SAF72G8pezsJJaolLZxd">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- KODB -->
-<div class="album">
-<img src="images/KingOverDose-Cover Art.jpg" alt="KODB">
-</a>
-
-<h3>J. Cole - KODB</h3>
-
-<audio controls>
-<source src="music/KOD (2026).mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1YsAvmpgqat3Dz5wBFokUHQ5jcL6yr3WH">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- CJSTeeZ -->
-<div class="album">
-<img src="images/CJSteez-Cover Art.jpeg" alt="CJSTeeZ">
-</a>
-
-<h3>CJF Music x Kawaiisteez - CJSTeeZ</h3>
-
-<audio controls>
-<source src="music/CJSTeeZ.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1Kwdw-8Dda6JVXR7qa-NNtbIuCjYn5Aox">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- Infamous Echoes -->
-<div class="album">
-<img src="images/Infamous Echoes.jpg" alt="Infamous Echoes">
-</a>
-
-<h3>Mobb Deep - Infamous Echoes</h3>
-
-<audio controls>
-<source src="music/Infamous Echoes.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1HiXdQ5-5giwdstIbLC84sYbzxi1UaUwG">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- The Butcher -->
-<div class="album">
-<img src="images/CJF x The Butcher.png" alt="The Butcher">
-</a>
-
-<h3>Benny The Butcher - CJF x The Butcher</h3>
-
-<audio controls>
-<source src="music/CJF x The Butcher.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1ge5IaUtD4of5DEJR-VMzFvhddo71_xk7">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- Exodus -->
-<div class="album">
-<img src="images/DMX_Cover art.png" alt="Exodus">
-</a>
-
-<h3>DMX - Exodus: The Remixes</h3>
-
-<audio controls>
-<source src="music/DMX Exodus _Seq.mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1jGWpY58GsCvhlugeKP6mkC59NXdAP8WU">
-<button>Download Album</button>
-</a>
-</div>
-
-<!-- Magic -->
-<div class="album">
-<img src="images/Magic-cover.png" alt="Exodus">
-</a>
-
-<h3>Nas - Magic (CJF Remix)</h3>
-
-<audio controls>
-<source src="music/Magic (2026).mp3" type="audio/mpeg">
-</audio>
-
-<a href="https://drive.google.com/uc?export=download&id=1S-3ivQPERfZ6OyqUrAuRIwZRhiopchlP">
-<button>Download Album</button>
-</a>
-</div>
-
-
-
-
-
-</div>
-
-</main>
-
+<main class="remix-hub"><header class="remix-intro"><span class="hub-kicker">CJF1986 / Music Catalog</span><h1 class="hub-head">Remix Projects</h1><p class="hub-lede">Explore CJF1986's remix catalog beyond the Jay-Z series. Each project features completely new production while paying tribute to some of hip-hop's greatest artists.</p></header>
+<section aria-labelledby="featured-title" class="featured"><img alt="50 Cent - The Long Night album cover" src="images/TLN.png"/><div><span class="hub-kicker">Featured from the catalog</span><h2 id="featured-title">50 Cent - The Long Night</h2><p>Discover this CJF1986 remix project. Listen to the album preview, explore the project page, or download the album.</p><div class="hub-actions"><button class="hub-btn" id="featured-play" type="button">▶ Listen to Preview</button><a class="hub-btn secondary" href="the-long-night.html">View Album</a><a class="hub-btn secondary" href="https://drive.google.com/uc?export=download&amp;id=1LiLvrrQfJN_wgheLKixnIB2sbjNVjxVo" rel="noopener noreferrer" target="_blank">Download Album</a></div></div></section>
+<section aria-labelledby="catalog-title"><div class="catalog-head"><div><h2 id="catalog-title">Explore the Collection</h2><p>Find a project and listen before you download.</p></div><span class="catalog-count" id="catalog-count">19 projects</span></div><div class="catalog-tools"><input aria-label="Search remix projects" class="catalog-search" id="catalog-search" placeholder="Search artists or album titles..." type="search"/><div aria-label="Filter projects" class="filters" role="group"><button aria-pressed="true" class="filter-btn" data-filter="All" type="button">All Projects</button><button aria-pressed="false" class="filter-btn" data-filter="50 Cent" type="button">50 Cent</button><button aria-pressed="false" class="filter-btn" data-filter="Kendrick Lamar" type="button">Kendrick Lamar</button><button aria-pressed="false" class="filter-btn" data-filter="Ransom" type="button">Ransom</button><button aria-pressed="false" class="filter-btn" data-filter="Rapsody" type="button">Rapsody</button><button aria-pressed="false" class="filter-btn" data-filter="Freddie Gibbs" type="button">Freddie Gibbs</button><button aria-pressed="false" class="filter-btn" data-filter="RJ Payne" type="button">RJ Payne</button><button aria-pressed="false" class="filter-btn" data-filter="Nipsey Hussle" type="button">Nipsey Hussle</button><button aria-pressed="false" class="filter-btn" data-filter="2Pac" type="button">2Pac</button><button aria-pressed="false" class="filter-btn" data-filter="J. Cole" type="button">J. Cole</button><button aria-pressed="false" class="filter-btn" data-filter="Mobb Deep" type="button">Mobb Deep</button><button aria-pressed="false" class="filter-btn" data-filter="Benny The Butcher" type="button">Benny The Butcher</button><button aria-pressed="false" class="filter-btn" data-filter="DMX" type="button">DMX</button><button aria-pressed="false" class="filter-btn" data-filter="Nas" type="button">Nas</button><button aria-pressed="false" class="filter-btn" data-filter="CJF Music" type="button">CJF Music</button></div></div><div class="album-grid-upgraded" id="catalog-grid"><article class="album-card" data-category="50 Cent" data-index="0" data-search="50 cent - the long night"><div class="album-art-wrap"><img alt="Cover artwork for 50 Cent - The Long Night" class="album-art" loading="lazy" src="images/TLN.png"/><span class="album-tag">50 Cent</span></div><div class="album-body"><h3>50 Cent - The Long Night</h3><div class="album-controls"><button aria-label="Play preview of 50 Cent - The Long Night" aria-pressed="false" class="preview-play" data-play="0" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="0">Tap to listen</span></div></div><div class="album-links"><a href="the-long-night.html">View Album</a><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1LiLvrrQfJN_wgheLKixnIB2sbjNVjxVo" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Kendrick Lamar" data-index="1" data-search="kendrick lamar - redamned"><div class="album-art-wrap"><img alt="Cover artwork for Kendrick Lamar - ReDAMNed" class="album-art" loading="lazy" src="images/ReDAMNed.png"/><span class="album-tag">Kendrick Lamar</span></div><div class="album-body"><h3>Kendrick Lamar - ReDAMNed</h3><div class="album-controls"><button aria-label="Play preview of Kendrick Lamar - ReDAMNed" aria-pressed="false" class="preview-play" data-play="1" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="1">Tap to listen</span></div></div><div class="album-links"><a href="redamned.html">View Album</a><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1niWzq1CZWtFRLkvlcROal9H6bOcvTyaM" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Nas" data-index="2" data-search="nas - light years"><div class="album-art-wrap"><img alt="Cover artwork for Nas - Light Years" class="album-art" loading="lazy" src="images/Light Years_Cover.png"/><span class="album-tag">Nas</span></div><div class="album-body"><h3>Nas - Light Years</h3><div class="album-controls"><button aria-label="Play preview of Nas - Light Years" aria-pressed="false" class="preview-play" data-play="2" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="2">Tap to listen</span></div></div><div class="album-links"><a href="lightyears.html">View Album</a><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1U7chd-4-Mv3qEdFWlRnRjbat6GlK16zc" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Ransom" data-index="3" data-search="ransom - the reinvention remix"><div class="album-art-wrap"><img alt="Cover artwork for Ransom - The Reinvention Remix" class="album-art" loading="lazy" src="images/TRR - Cover Art.png"/><span class="album-tag">Ransom</span></div><div class="album-body"><h3>Ransom - The Reinvention Remix</h3><div class="album-controls"><button aria-label="Play preview of Ransom - The Reinvention Remix" aria-pressed="false" class="preview-play" data-play="3" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="3">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=16cLDcY2j8uZFEnUkfOM2YlerHQB4P5Hs" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Rapsody" data-index="4" data-search="rapsody - please don't cry (side a)"><div class="album-art-wrap"><img alt="Cover artwork for Rapsody - Please Don't Cry (Side A)" class="album-art" loading="lazy" src="images/Cover Art.png"/><span class="album-tag">Rapsody</span></div><div class="album-body"><h3>Rapsody - Please Don't Cry (Side A)</h3><div class="album-controls"><button aria-label="Play preview of Rapsody - Please Don't Cry (Side A)" aria-pressed="false" class="preview-play" data-play="4" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="4">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1zQHvpoSfgmi6s31VmQozP5D1Dzo9ktP5" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Rapsody" data-index="5" data-search="rapsody - please don't cry (side b)"><div class="album-art-wrap"><img alt="Cover artwork for Rapsody - Please Don't Cry (Side B)" class="album-art" loading="lazy" src="images/Cover Art-2.png"/><span class="album-tag">Rapsody</span></div><div class="album-body"><h3>Rapsody - Please Don't Cry (Side B)</h3><div class="album-controls"><button aria-label="Play preview of Rapsody - Please Don't Cry (Side B)" aria-pressed="false" class="preview-play" data-play="5" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="5">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1pDEdPImunA5UjVclJY6AKmzwf0az5k47" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Freddie Gibbs" data-index="6" data-search="freddie gibbs - freddie kane ep"><div class="album-art-wrap"><img alt="Cover artwork for Freddie Gibbs - Freddie Kane EP" class="album-art" loading="lazy" src="images/Freddie Kane EP.jpeg"/><span class="album-tag">Freddie Gibbs</span></div><div class="album-body"><h3>Freddie Gibbs - Freddie Kane EP</h3><div class="album-controls"><button aria-label="Play preview of Freddie Gibbs - Freddie Kane EP" aria-pressed="false" class="preview-play" data-play="6" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="6">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1oWrhxFBYtUcjH-9TucRNCqItCjBY7Cp6" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="RJ Payne" data-index="7" data-search="rj payne - the payne tape"><div class="album-art-wrap"><img alt="Cover artwork for RJ Payne - The Payne Tape" class="album-art" loading="lazy" src="images/RJ Payne.png"/><span class="album-tag">RJ Payne</span></div><div class="album-body"><h3>RJ Payne - The Payne Tape</h3><div class="album-controls"><button aria-label="Play preview of RJ Payne - The Payne Tape" aria-pressed="false" class="preview-play" data-play="7" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="7">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1Uzg3-FsCqcY4kWXCe62VCewSd_u7MDAw" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="CJF Music" data-index="8" data-search="cjf music - cjf radio, vol. 1"><div class="album-art-wrap"><img alt="Cover artwork for CJF Music - CJF Radio, Vol. 1" class="album-art" loading="lazy" src="images/CJFR-COVER-min.png"/><span class="album-tag">CJF Music</span></div><div class="album-body"><h3>CJF Music - CJF Radio, Vol. 1</h3><div class="album-controls"><button aria-label="Play preview of CJF Music - CJF Radio, Vol. 1" aria-pressed="false" class="preview-play" data-play="8" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="8">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1C0uCs5VM0j0fToo4AypxKu7dZN014Rkg" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="CJF Music" data-index="9" data-search="cjf music - cjf radio, vol. 2"><div class="album-art-wrap"><img alt="Cover artwork for CJF Music - CJF Radio, Vol. 2" class="album-art" loading="lazy" src="images/CJFRVol2-Cover.png"/><span class="album-tag">CJF Music</span></div><div class="album-body"><h3>CJF Music - CJF Radio, Vol. 2</h3><div class="album-controls"><button aria-label="Play preview of CJF Music - CJF Radio, Vol. 2" aria-pressed="false" class="preview-play" data-play="9" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="9">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1iFRjdNBQKDLBmgIwgnSM1OhImnTZHY9u" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Nipsey Hussle" data-index="10" data-search="nipsey hussle - tmc: bridges &amp; boulevards"><div class="album-art-wrap"><img alt="Cover artwork for Nipsey Hussle - TMC: Bridges &amp; Boulevards" class="album-art" loading="lazy" src="images/nipsey.png"/><span class="album-tag">Nipsey Hussle</span></div><div class="album-body"><h3>Nipsey Hussle - TMC: Bridges &amp; Boulevards</h3><div class="album-controls"><button aria-label="Play preview of Nipsey Hussle - TMC: Bridges &amp; Boulevards" aria-pressed="false" class="preview-play" data-play="10" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="10">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1rwVOHMcULStyz0mDAF8pYwAGOYBItMjV" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Nas" data-index="11" data-search="nas - the book of nastradamus"><div class="album-art-wrap"><img alt="Cover artwork for Nas - The Book Of Nastradamus" class="album-art" loading="lazy" src="images/Nastradamus  cover art.png"/><span class="album-tag">Nas</span></div><div class="album-body"><h3>Nas - The Book Of Nastradamus</h3><div class="album-controls"><button aria-label="Play preview of Nas - The Book Of Nastradamus" aria-pressed="false" class="preview-play" data-play="11" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="11">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=11ZJqaS_M1OZ9cLMv1P-AhcngtRGnJ3_d" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="2Pac" data-index="12" data-search="2pac - thug passion project"><div class="album-art-wrap"><img alt="Cover artwork for 2Pac - Thug Passion Project" class="album-art" loading="lazy" src="images/Thug Passion Project.jpg"/><span class="album-tag">2Pac</span></div><div class="album-body"><h3>2Pac - Thug Passion Project</h3><div class="album-controls"><button aria-label="Play preview of 2Pac - Thug Passion Project" aria-pressed="false" class="preview-play" data-play="12" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="12">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1GNVVczVU1uq-SAF72G8pezsJJaolLZxd" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="J. Cole" data-index="13" data-search="j. cole - kodb"><div class="album-art-wrap"><img alt="Cover artwork for J. Cole - KODB" class="album-art" loading="lazy" src="images/KingOverDose-Cover Art.jpg"/><span class="album-tag">J. Cole</span></div><div class="album-body"><h3>J. Cole - KODB</h3><div class="album-controls"><button aria-label="Play preview of J. Cole - KODB" aria-pressed="false" class="preview-play" data-play="13" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="13">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1YsAvmpgqat3Dz5wBFokUHQ5jcL6yr3WH" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="CJF Music" data-index="14" data-search="cjf music x kawaiisteez - cjsteez"><div class="album-art-wrap"><img alt="Cover artwork for CJF Music x Kawaiisteez - CJSTeeZ" class="album-art" loading="lazy" src="images/CJSteez-Cover Art.jpeg"/><span class="album-tag">CJF Music</span></div><div class="album-body"><h3>CJF Music x Kawaiisteez - CJSTeeZ</h3><div class="album-controls"><button aria-label="Play preview of CJF Music x Kawaiisteez - CJSTeeZ" aria-pressed="false" class="preview-play" data-play="14" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="14">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1Kwdw-8Dda6JVXR7qa-NNtbIuCjYn5Aox" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Mobb Deep" data-index="15" data-search="mobb deep - infamous echoes"><div class="album-art-wrap"><img alt="Cover artwork for Mobb Deep - Infamous Echoes" class="album-art" loading="lazy" src="images/Infamous Echoes.jpg"/><span class="album-tag">Mobb Deep</span></div><div class="album-body"><h3>Mobb Deep - Infamous Echoes</h3><div class="album-controls"><button aria-label="Play preview of Mobb Deep - Infamous Echoes" aria-pressed="false" class="preview-play" data-play="15" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="15">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1HiXdQ5-5giwdstIbLC84sYbzxi1UaUwG" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Benny The Butcher" data-index="16" data-search="benny the butcher - cjf x the butcher"><div class="album-art-wrap"><img alt="Cover artwork for Benny The Butcher - CJF x The Butcher" class="album-art" loading="lazy" src="images/CJF x The Butcher.png"/><span class="album-tag">Benny The Butcher</span></div><div class="album-body"><h3>Benny The Butcher - CJF x The Butcher</h3><div class="album-controls"><button aria-label="Play preview of Benny The Butcher - CJF x The Butcher" aria-pressed="false" class="preview-play" data-play="16" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="16">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1ge5IaUtD4of5DEJR-VMzFvhddo71_xk7" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="DMX" data-index="17" data-search="dmx - exodus: the remixes"><div class="album-art-wrap"><img alt="Cover artwork for DMX - Exodus: The Remixes" class="album-art" loading="lazy" src="images/DMX_Cover art.png"/><span class="album-tag">DMX</span></div><div class="album-body"><h3>DMX - Exodus: The Remixes</h3><div class="album-controls"><button aria-label="Play preview of DMX - Exodus: The Remixes" aria-pressed="false" class="preview-play" data-play="17" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="17">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1jGWpY58GsCvhlugeKP6mkC59NXdAP8WU" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Nas" data-index="18" data-search="nas - magic (cjf remix)"><div class="album-art-wrap"><img alt="Cover artwork for Nas - Magic (CJF Remix)" class="album-art" loading="lazy" src="images/Magic-cover.png"/><span class="album-tag">Nas</span></div><div class="album-body"><h3>Nas - Magic (CJF Remix)</h3><div class="album-controls"><button aria-label="Play preview of Nas - Magic (CJF Remix)" aria-pressed="false" class="preview-play" data-play="18" type="button">▶</button><div class="preview-status"><strong>Album preview</strong><span aria-live="polite" data-status="18">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1S-3ivQPERfZ6OyqUrAuRIwZRhiopchlP" rel="noopener noreferrer" target="_blank">Download</a></div></div></article></div><div class="hub-empty" id="catalog-empty">No projects match your search. Try another artist or clear the filter.</div><p class="hub-note">Previews use the original audio files from this page. Only one preview plays at a time. For the full project, use the album page (where available) or the download link.</p></section>
+<audio id="catalog-audio" preload="none"></audio></main>
 <footer>
-<p>&copy; 2026 CJF Music. All rights reserved.</p>
+<p>© 2026 CJF Music. All rights reserved.</p>
 <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
 <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
 </footer>
-
-<!-- JS (FULL FIXED VERSION) -->
 <script>
-const toggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-// Mobile menu toggle
-toggle.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
-
-// Dropdowns (mobile only behavior)
-const dropdowns = document.querySelectorAll(".dropdown-toggle");
-
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener("click", function(e) {
-
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-
-      const parent = this.parentElement;
-
-      // close other dropdowns
-      document.querySelectorAll(".dropdown").forEach(item => {
-        if (item !== parent) {
-          item.classList.remove("open");
-        }
-      });
-
-      // toggle current
-      parent.classList.toggle("open");
-    }
-
-  });
-});
-</script>
-
-</body>
-</html>
-
-</body>
-</html>
+// Mobile navigation — keep existing dropdown behavior.
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+if (toggle && navLinks) toggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+document.querySelectorAll('.dropdown-toggle').forEach(dropdown => dropdown.addEventListener('click', function(e) {
+  if (window.innerWidth <= 768) { e.preventDefault(); const parent = this.parentElement; document.querySelectorAll('.dropdown').forEach(item => {if(item!==parent)item.classList.remove('open')});parent.classList.toggle('open'); }
+}));
+(() => {
+ const albums = [{"title": "50 Cent - The Long Night", "image": "images/TLN.png", "audio": "music/TLN.mp3", "download": "https://drive.google.com/uc?export=download&id=1LiLvrrQfJN_wgheLKixnIB2sbjNVjxVo", "detail": "the-long-night.html", "category": "Other Artists"}, {"title": "Kendrick Lamar - ReDAMNed", "image": "images/ReDAMNed.png", "audio": "music/ReDAMNed.mp3", "download": "https://drive.google.com/uc?export=download&id=1niWzq1CZWtFRLkvlcROal9H6bOcvTyaM", "detail": "redamned.html", "category": "Other Artists"}, {"title": "Nas - Light Years", "image": "images/Light Years_Cover.png", "audio": "music/Light Years_Final.mp3", "download": "https://drive.google.com/uc?export=download&id=1U7chd-4-Mv3qEdFWlRnRjbat6GlK16zc", "detail": "lightyears.html", "category": "Nas"}, {"title": "Ransom - The Reinvention Remix", "image": "images/TRR - Cover Art.png", "audio": "music/Ransom-Album_Seq.mp3", "download": "https://drive.google.com/uc?export=download&id=16cLDcY2j8uZFEnUkfOM2YlerHQB4P5Hs", "detail": "", "category": "Other Artists"}, {"title": "Rapsody - Please Don't Cry (Side A)", "image": "images/Cover Art.png", "audio": "music/Album Sequnce.mp3", "download": "https://drive.google.com/uc?export=download&id=1zQHvpoSfgmi6s31VmQozP5D1Dzo9ktP5", "detail": "", "category": "Other Artists"}, {"title": "Rapsody - Please Don't Cry (Side B)", "image": "images/Cover Art-2.png", "audio": "music/Side B.mp3", "download": "https://drive.google.com/uc?export=download&id=1pDEdPImunA5UjVclJY6AKmzwf0az5k47", "detail": "", "category": "Other Artists"}, {"title": "Freddie Gibbs - Freddie Kane EP", "image": "images/Freddie Kane EP.jpeg", "audio": "music/FK-Full EP.mp3", "download": "https://drive.google.com/uc?export=download&id=1oWrhxFBYtUcjH-9TucRNCqItCjBY7Cp6", "detail": "", "category": "Other Artists"}, {"title": "RJ Payne - The Payne Tape", "image": "images/RJ Payne.png", "audio": "music/The Payne Tape.mp3", "download": "https://drive.google.com/uc?export=download&id=1Uzg3-FsCqcY4kWXCe62VCewSd_u7MDAw", "detail": "", "category": "Other Artists"}, {"title": "CJF Music - CJF Radio, Vol. 1", "image": "images/CJFR-COVER-min.png", "audio": "music/CJFR.mp3", "download": "https://drive.google.com/uc?export=download&id=1C0uCs5VM0j0fToo4AypxKu7dZN014Rkg", "detail": "cjf-radio-vol1.html", "category": "CJF Music"}, {"title": "CJF Music - CJF Radio, Vol. 2", "image": "images/CJFRVol2-Cover.png", "audio": "music/CJFR-Sequnce.mp3", "download": "https://drive.google.com/uc?export=download&id=1iFRjdNBQKDLBmgIwgnSM1OhImnTZHY9u", "detail": "cjf-radio-vol2.html", "category": "CJF Music"}, {"title": "Nipsey Hussle - TMC: Bridges & Boulevards", "image": "images/nipsey.png", "audio": "music/TMC-Full Album.mp3", "download": "https://drive.google.com/uc?export=download&id=1rwVOHMcULStyz0mDAF8pYwAGOYBItMjV", "detail": "", "category": "Other Artists"}, {"title": "Nas - The Book Of Nastradamus", "image": "images/Nastradamus  cover art.png", "audio": "music/Nastradamus (2026).mp3", "download": "https://drive.google.com/uc?export=download&id=11ZJqaS_M1OZ9cLMv1P-AhcngtRGnJ3_d", "detail": "", "category": "Nas"}, {"title": "2Pac - Thug Passion Project", "image": "images/Thug Passion Project.jpg", "audio": "music/Thug Passion Project.mp3", "download": "https://drive.google.com/uc?export=download&id=1GNVVczVU1uq-SAF72G8pezsJJaolLZxd", "detail": "", "category": "Other Artists"}, {"title": "J. Cole - KODB", "image": "images/KingOverDose-Cover Art.jpg", "audio": "music/KOD (2026).mp3", "download": "https://drive.google.com/uc?export=download&id=1YsAvmpgqat3Dz5wBFokUHQ5jcL6yr3WH", "detail": "", "category": "Other Artists"}, {"title": "CJF Music x Kawaiisteez - CJSTeeZ", "image": "images/CJSteez-Cover Art.jpeg", "audio": "music/CJSTeeZ.mp3", "download": "https://drive.google.com/uc?export=download&id=1Kwdw-8Dda6JVXR7qa-NNtbIuCjYn5Aox", "detail": "", "category": "CJF Music"}, {"title": "Mobb Deep - Infamous Echoes", "image": "images/Infamous Echoes.jpg", "audio": "music/Infamous Echoes.mp3", "download": "https://drive.google.com/uc?export=download&id=1HiXdQ5-5giwdstIbLC84sYbzxi1UaUwG", "detail": "", "category": "Other Artists"}, {"title": "Benny The Butcher - CJF x The Butcher", "image": "images/CJF x The Butcher.png", "audio": "music/CJF x The Butcher.mp3", "download": "https://drive.google.com/uc?export=download&id=1ge5IaUtD4of5DEJR-VMzFvhddo71_xk7", "detail": "", "category": "Other Artists"}, {"title": "DMX - Exodus: The Remixes", "image": "images/DMX_Cover art.png", "audio": "music/DMX Exodus _Seq.mp3", "download": "https://drive.google.com/uc?export=download&id=1jGWpY58GsCvhlugeKP6mkC59NXdAP8WU", "detail": "", "category": "Other Artists"}, {"title": "Nas - Magic (CJF Remix)", "image": "images/Magic-cover.png", "audio": "music/Magic (2026).mp3", "download": "https://drive.google.com/uc?export=download&id=1S-3ivQPERfZ6OyqUrAuRIwZRhiopchlP", "detail": "", "category": "Nas"}];
+ const audio = document.getElementById('catalog-audio');
+ const buttons = Array.from(document.querySelectorAll('[data-play]'));
+ const featuredPlay = document.getElementById('featured-play');
+ let active = -1;
+ function sync() {
+  buttons.forEach(button => {const i=Number(button.dataset.play), playing=i===active&&!audio.paused;button.textContent=playing?'⏸':'▶';button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',(playing?'Pause':'Play')+' preview of '+albums[i].title);const status=document.querySelector('[data-status="'+i+'"]');if(status && status.dataset.error!=='true')status.textContent=playing?'Now playing':i===active?'Paused':'Tap to listen';});
+  const playing=active===0&&!audio.paused;featuredPlay.textContent=playing?'⏸ Pause Preview':'▶ Listen to Preview';featuredPlay.setAttribute('aria-pressed',String(playing));
+ }
+ async function select(i) {
+  if(active===i) {if(audio.paused) {try {await audio.play()}catch(e){showError(i)}} else audio.pause();sync();return;}
+  active=i;audio.pause();audio.src=albums[i].audio;document.querySelectorAll('[data-status]').forEach(el=>{delete el.dataset.error;});sync();
+  try {await audio.play();} catch(e) {showError(i);} sync();
+ }
+ function showError(i) {const status=document.querySelector('[data-status="'+i+'"]');if(status) {status.dataset.error='true';status.textContent='Preview unavailable — check audio file';}}
+ buttons.forEach(button=>button.addEventListener('click',()=>select(Number(button.dataset.play))));
+ featuredPlay.addEventListener('click',()=>select(0));
+ audio.addEventListener('play',sync);audio.addEventListener('pause',sync);audio.addEventListener('ended',()=>{audio.currentTime=0;sync()});
+ audio.addEventListener('error',()=>{if(active>=0)showError(active);sync()});
+ const search=document.getElementById('catalog-search');const filters=Array.from(document.querySelectorAll('[data-filter]'));const cards=Array.from(document.querySelectorAll('.album-card'));let filter='All';
+ function updateFilter() {const q=search.value.trim().toLocaleLowerCase();let count=0;cards.forEach(card=>{const matches=(filter==='All'||card.dataset.category===filter)&&card.dataset.search.includes(q);card.hidden=!matches;if(matches)count++;});document.getElementById('catalog-count').textContent=count+' '+(count===1?'project':'projects');document.getElementById('catalog-empty').classList.toggle('visible',count===0);}
+ search.addEventListener('input',updateFilter);filters.forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;filters.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));updateFilter();}));sync();
+})();
+</script></body></html>
