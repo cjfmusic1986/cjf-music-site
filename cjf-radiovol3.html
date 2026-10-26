@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CJF Radio Vol. 3</title>
 <link rel="stylesheet" href="styles.css">
+<style>
+.blend-player{max-width:800px;margin:35px auto;padding:24px;border-radius:18px;background:#151515;color:#f8f8f8;border:1px solid #363636;box-shadow:0 12px 35px #0005;font-family:Arial,sans-serif}
+.blend-now{display:flex;align-items:center;gap:20px}.blend-now img{width:116px;height:116px;object-fit:cover;border-radius:10px}.blend-info{min-width:0}.blend-eyebrow{font-size:11px;letter-spacing:2px;color:#e8bb64;font-weight:700}.blend-info h2{font-size:clamp(20px,4vw,29px);margin:10px 0 5px;color:white}.blend-info p{margin:0;color:#bbb;font-size:14px}
+.blend-controls{display:flex;justify-content:center;align-items:center;gap:24px;margin:23px 0 14px}.blend-controls button{background:transparent;color:#fff;border:0;cursor:pointer;font-size:26px;padding:9px}.blend-controls .blend-main-play{width:62px;height:62px;border-radius:50%;background:#e6b55e;color:#111;font-size:24px}.blend-controls button:hover{opacity:.8}
+.blend-seek{display:flex;gap:12px;align-items:center;font-size:12px;color:#bbb}.blend-seek input{flex:1;min-width:0}.blend-player input[type=range]{accent-color:#e6b55e;cursor:pointer}.blend-volume{display:flex;justify-content:flex-end;gap:12px;align-items:center;font-size:12px;color:#bbb;margin:13px 0 20px}.blend-volume input{width:120px}.blend-track-heading{border-top:1px solid #383838;padding-top:20px;margin:0 0 10px;color:#fff}.blend-tracks{padding:0;margin:0;list-style:none}.blend-tracks li{margin:0;border-bottom:1px solid #2c2c2c}.blend-track-button{display:flex;width:100%;gap:14px;align-items:center;padding:14px 10px;border:0;background:transparent;color:#eee;text-align:left;cursor:pointer;font:inherit}.blend-track-button:hover,.blend-track-button.active{background:#29241c}.blend-track-button.active{color:#e8bb64}.blend-track-number{width:22px;color:#999;font-size:13px}.blend-track-name{flex:1}.blend-track-icon{font-size:19px;display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:#e6b55e;color:#111;font-weight:bold;flex-shrink:0}.blend-track-button.active .blend-track-icon{background:#f4ca7e;color:#111}.blend-error{color:#ffb4a8;min-height:1em;font-size:13px}
+@media(max-width:520px){.blend-player{padding:16px}.blend-now img{width:88px;height:88px}.blend-volume{justify-content:center}}
+</style>
 </head>
 
 <body>
@@ -85,72 +92,22 @@
 <img src="images/CJF Radio Vol 3-Cover.png" alt="CJF Radio Vol. 3">
 </div>
 
-<section class="tracklist">
-
-<ol>
-
-<li>Intro (feat. Matt Hatt)
-<audio controls>
-<source src="CJF Radio Vol 3/01 Intro (With Matt Hatt).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>Head High (feat. Whit Whitty)
-<audio controls>
-<source src="CJF Radio Vol 3/02 Head High (With Whit Whitty).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>Silence of the Lambs (feat. Astro Rockit)
-<audio controls>
-<source src="CJF Radio Vol 3/03 Silence Of The Lambs (With Astro Rockit).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>Lost In My Ways (feat. SP)
-<audio controls>
-<source src="CJF Radio Vol 3/04 Lost In My Ways (With SP).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>Distance (feat. DJ Ty Litty)
-<audio controls>
-<source src="CJF Radio Vol 3/05 Distance (With YKTD).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>Keep It Moving (feat. Matt Hatt & KawaiiSteez)
-<audio controls>
-<source src="CJF Radio Vol 3/06 Keep It Moving (With Matt Hatt & Kawaiisteez).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>No Ops (feat. Whit Whitty)
-<audio controls>
-<source src="CJF Radio Vol 3/07 No Ops (With Whit Whitty).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>Preach (feat. Jermel Morgan & Matt Hatt)
-<audio controls>
-<source src="CJF Radio Vol 3/08 Preach (With Jermel - The Creative & Matt Hatt).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>Because I'm Living (feat. Jermel Morgan)
-<audio controls>
-<source src="CJF Radio Vol 3/09 Because I'm Living (With Jermel - The Creative).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-<li>My Last Song (feat. Matt Hatt)
-<audio controls>
-<source src="CJF Radio Vol 3/10 My Last Song (With Matt Hatt).mp3" type="audio/mpeg">
-</audio>
-</li>
-
-</ol>
-
+<section class="blend-player" aria-label="CJF Radio Vol. 3 album player">
+  <div class="blend-now">
+    <img id="blend-art" src="images/CJF Radio Vol 3-Cover.png" alt="CJF Radio Vol. 3 album cover">
+    <div class="blend-info"><span class="blend-eyebrow">CJF RADIO VOL. 3 • 10 TRACKS</span><h2 id="blend-title">Intro (feat. Matt Hatt)</h2><p>CJF Radio Vol. 3 • CJF1986 Production</p></div>
+  </div>
+  <audio id="blend-audio" preload="metadata"></audio>
+  <div class="blend-controls">
+    <button type="button" id="blend-prev" aria-label="Previous track">⏮</button>
+    <button type="button" id="blend-play" class="blend-main-play" aria-label="Play">▶</button>
+    <button type="button" id="blend-next" aria-label="Next track">⏭</button>
+  </div>
+  <div class="blend-seek"><span id="blend-elapsed">0:00</span><input id="blend-progress" type="range" min="0" max="100" value="0" aria-label="Seek through track"><span id="blend-duration">0:00</span></div>
+  <div class="blend-volume"><label for="blend-volume">Volume</label><input id="blend-volume" type="range" min="0" max="100" value="80"></div>
+  <p id="blend-error" class="blend-error" role="status" aria-live="polite"></p>
+  <h3 class="blend-track-heading">Tracklist</h3>
+  <ol id="blend-tracklist" class="blend-tracks"></ol>
 </section>
 
 <div class="download-wrapper">
@@ -221,5 +178,115 @@ dropdowns.forEach(dropdown => {
 });
 </script>
 
+<script>
+(() => {
+  const tracks = [
+  {
+    "title": "Intro (feat. Matt Hatt)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/01 Intro (With Matt Hatt).mp3"
+  },
+  {
+    "title": "Head High (feat. Whit Whitty)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/02 Head High (With Whit Whitty).mp3"
+  },
+  {
+    "title": "Silence of the Lambs (feat. Astro Rockit)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/03 Silence Of The Lambs (With Astro Rockit).mp3"
+  },
+  {
+    "title": "Lost In My Ways (feat. SP)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/04 Lost In My Ways (With SP).mp3"
+  },
+  {
+    "title": "Distance (feat. DJ Ty Litty)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/05 Distance (With YKTD).mp3"
+  },
+  {
+    "title": "Keep It Moving (feat. Matt Hatt & KawaiiSteez)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/06 Keep It Moving (With Matt Hatt & Kawaiisteez).mp3"
+  },
+  {
+    "title": "No Ops (feat. Whit Whitty)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/07 No Ops (With Whit Whitty).mp3"
+  },
+  {
+    "title": "Preach (feat. Jermel Morgan & Matt Hatt)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/08 Preach (With Jermel - The Creative & Matt Hatt).mp3"
+  },
+  {
+    "title": "Because I'm Living (feat. Jermel Morgan)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/09 Because I'm Living (With Jermel - The Creative).mp3"
+  },
+  {
+    "title": "My Last Song (feat. Matt Hatt)",
+    "artist": "CJF Radio Vol. 3 • CJF1986 Production",
+    "src": "CJF Radio Vol 3/10 My Last Song (With Matt Hatt).mp3"
+  }
+];
+  const byId = id => document.getElementById(id);
+  const audio = byId('blend-audio');
+  const play = byId('blend-play');
+  const progress = byId('blend-progress');
+  const list = byId('blend-tracklist');
+  const error = byId('blend-error');
+  let current = 0;
+  const format = seconds => Number.isFinite(seconds) ? `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}` : '0:00';
+  function draw() {
+    list.replaceChildren();
+    tracks.forEach((track, i) => {
+      const li = document.createElement('li');
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'blend-track-button' + (i === current ? ' active' : '');
+      button.setAttribute('aria-label', (i === current && !audio.paused ? 'Pause ' : 'Play ') + track.title);
+      const number = document.createElement('span'); number.className = 'blend-track-number'; number.textContent = String(i + 1).padStart(2, '0');
+      const name = document.createElement('span'); name.className = 'blend-track-name'; name.textContent = track.title;
+      const icon = document.createElement('span'); icon.className = 'blend-track-icon'; icon.textContent = i === current && !audio.paused ? '⏸' : '▶';
+      button.append(number, name, icon);
+      button.addEventListener('click', () => {
+         if (i === current) { audio.paused ? start() : audio.pause(); }
+         else { load(i, true); }
+       });
+      li.append(button); list.append(li);
+    });
+  }
+  async function start() {
+    try { error.textContent = ''; await audio.play(); }
+    catch (e) { error.textContent = 'This track could not play. Check that its MP3 file is uploaded at the correct path.'; console.warn(e); }
+  }
+  function load(i, autoplay = false) {
+    current = (i + tracks.length) % tracks.length;
+    audio.src = tracks[current].src;
+    byId('blend-title').textContent = tracks[current].title;
+    byId('blend-elapsed').textContent = '0:00';
+    byId('blend-duration').textContent = '0:00';
+    progress.value = 0; error.textContent = '';
+    draw();
+    if (autoplay) start();
+  }
+  play.addEventListener('click', () => audio.paused ? start() : audio.pause());
+  byId('blend-prev').addEventListener('click', () => audio.currentTime > 3 ? audio.currentTime = 0 : load(current - 1, true));
+  byId('blend-next').addEventListener('click', () => load(current + 1, true));
+  audio.addEventListener('play', () => { play.textContent = '⏸'; play.setAttribute('aria-label', 'Pause'); draw(); });
+  audio.addEventListener('pause', () => { play.textContent = '▶'; play.setAttribute('aria-label', 'Play'); draw(); });
+  audio.addEventListener('loadedmetadata', () => byId('blend-duration').textContent = format(audio.duration));
+  audio.addEventListener('timeupdate', () => { byId('blend-elapsed').textContent = format(audio.currentTime); if (Number.isFinite(audio.duration) && audio.duration > 0) progress.value = audio.currentTime / audio.duration * 100; });
+  progress.addEventListener('input', () => { if (Number.isFinite(audio.duration) && audio.duration > 0) audio.currentTime = audio.duration * Number(progress.value) / 100; });
+  byId('blend-volume').addEventListener('input', e => audio.volume = Number(e.target.value) / 100);
+  audio.addEventListener('ended', () => load(current + 1, true));
+  audio.addEventListener('error', () => { error.textContent = 'Audio unavailable. Verify the MP3 filename and folder on your website.'; });
+  audio.volume = .8;
+  load(0);
+})();
+</script>
 </body>
 </html>
