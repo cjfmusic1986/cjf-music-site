@@ -1,159 +1,79 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CJF Music - Single Remixes</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CJF Music - Single Remixes</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+:root{color-scheme:dark}body{background:#0d0d0e;color:#f5f0e7} .remix-hub{--gold:#e6b55e;--muted:#a7a3a0;--line:#37302a;max-width:1240px;margin:0 auto;padding:36px 22px 90px;font-family:Arial,Helvetica,sans-serif;box-sizing:border-box}.remix-hub *{box-sizing:border-box}.remix-hub button,.remix-hub input{font:inherit}.remix-hub button{cursor:pointer}.remix-hub a{text-decoration:none}.hub-kicker{color:var(--gold);text-transform:uppercase;font-weight:800;font-size:12px;letter-spacing:2.4px}.hub-head{margin:14px 0 16px;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:clamp(32px,4.3vw,48px);font-weight:700;line-height:1.16;letter-spacing:-0.8px;text-align:center}.hub-lede{color:#cfc9c1;max-width:800px;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.75;font-size:clamp(16px,1.5vw,18px);margin:0 0 34px;text-align:left}.featured{background:linear-gradient(125deg,#282015,#171719 60%,#121214);border:1px solid #5a4329;border-radius:22px;padding:26px;display:grid;grid-template-columns:minmax(170px,310px) 1fr;align-items:center;gap:32px;box-shadow:0 15px 35px #0005}.featured img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;box-shadow:0 10px 30px #0009}.featured h2{font-size:clamp(25px,4vw,43px);line-height:1.15;color:white;margin:12px 0}.featured p{color:#c9c1b4;line-height:1.65}.hub-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:22px}.hub-btn{border-radius:999px;padding:11px 19px;min-height:43px;font-size:13px;font-weight:750;border:1px solid #a78144;background:var(--gold);color:#17110a;display:inline-flex;align-items:center;justify-content:center;gap:8px}.hub-btn.secondary{background:transparent;color:#f2d29b;border-color:#81643d}.hub-btn:hover{filter:brightness(1.1)}.catalog-head{margin:48px 0 19px;display:flex;justify-content:space-between;align-items:end;gap:14px;flex-wrap:wrap}.catalog-head h2{font-size:clamp(24px,3vw,34px);margin:0 0 7px;color:white}.catalog-head p{margin:0;color:#a9a39d}.catalog-count{font-size:13px;color:#d9b779}.catalog-tools{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:0 0 23px}.catalog-search{flex:1 1 290px;background:#1c1c1f;color:white;border:1px solid #4a4239;border-radius:12px;padding:14px 17px;min-width:0;outline-offset:3px}.catalog-search:focus{outline:2px solid #e6b55e}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter-btn{background:#242326;border:1px solid #454044;color:#d5d1cb;border-radius:999px;padding:10px 15px;font-size:13px;font-weight:700}.filter-btn[aria-pressed=true]{background:#e6b55e;border-color:#e6b55e;color:#15100a}.album-grid-upgraded{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}.album-card{min-width:0;border-radius:16px;background:#1a1a1d;border:1px solid #373332;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}.album-card:hover{transform:translateY(-3px);border-color:#9d7842}.album-art-wrap{position:relative;background:#121212}.album-art{display:block;width:100%;aspect-ratio:1;object-fit:cover}.album-tag{position:absolute;top:11px;left:11px;background:#111d;color:#eac78a;border:1px solid #8d693d88;border-radius:99px;padding:6px 10px;font-size:11px;font-weight:700}.album-body{padding:17px;display:flex;flex-direction:column;gap:13px;flex:1}.album-body h3{color:white;font-size:16px;line-height:1.4;margin:0;min-height:45px}.album-controls{display:flex;align-items:center;gap:11px}.preview-play{width:44px;height:44px;min-width:44px;border-radius:50%;border:0;background:#e6b55e;color:#111;font-size:18px;display:grid;place-items:center}.preview-play:hover{background:#f3ca7f}.preview-play:focus-visible,.hub-btn:focus-visible,.filter-btn:focus-visible{outline:3px solid white;outline-offset:3px}.preview-status{min-width:0;color:#bcb6af;font-size:12px;line-height:1.3}.preview-status strong{display:block;color:#e9c68d;font-size:12px;margin-bottom:3px}.album-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}.album-links a{flex:1 1 auto;text-align:center;padding:10px 9px;border:1px solid #6c5534;color:#f1d6a8;border-radius:9px;font-size:12px;font-weight:750}.album-links a.download{background:#e6b55e;color:#19130c;border-color:#e6b55e}.album-links a:hover{filter:brightness(1.13)}.hub-empty{display:none;border:1px dashed #6a5942;border-radius:15px;padding:40px;text-align:center;color:#d6c4a7}.hub-empty.visible{display:block}.hub-note{margin:26px 0 0;color:#aaa29a;font-size:13px;line-height:1.6}.album-card[hidden]{display:none!important}@media(max-width:1050px){.album-grid-upgraded{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:750px){.featured{grid-template-columns:1fr}.featured img{max-width:290px}.album-grid-upgraded{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:470px){.remix-hub{padding:24px 14px 70px}.featured{padding:17px;gap:14px}.album-grid-upgraded{gap:12px}.album-body{padding:12px;gap:10px}.album-body h3{font-size:14px;min-height:58px}.album-tag{font-size:10px}.album-links a{font-size:11px}.preview-status{font-size:11px}}
+.remix-intro{width:100%;max-width:900px;margin:0 auto 38px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.remix-intro .hub-kicker{display:block;text-align:center;width:100%}.remix-intro .hub-head{width:100%;margin:14px auto 16px;text-align:center}.remix-intro .hub-lede{width:100%;max-width:760px;margin:0 auto;text-align:center;text-wrap:balance}@media(max-width:600px){.remix-intro{margin-bottom:30px}.remix-intro .hub-lede{font-size:16px;line-height:1.65}}
+/* Singles & Remixes: centered, consistent catalog hero */
+.singles-hub .singles-hero{width:100%;max-width:900px;margin:0 auto 42px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.singles-hub .singles-hero .hub-kicker{display:block;text-align:center;width:100%}
+.singles-hub .singles-hero .hub-head{width:100%;margin:14px 0 16px;text-align:center}
+.singles-hub .singles-hero .hub-lede{margin:0 auto;text-align:center;max-width:800px;width:100%}
+.singles-hub .album-grid-upgraded{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:900px){.singles-hub .album-grid-upgraded{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:470px){.singles-hub .album-grid-upgraded{grid-template-columns:1fr}}
+</style></head>
 <body>
-
 <nav class="navbar">
-
-  <a href="index.html" class="logo">
-    <img src="images/CJF Music Logo.png" alt="CJF1986 Logo">
-  </a>
-
-  <button class="menu-toggle" aria-label="Toggle navigation">
+<a class="logo" href="index.html">
+<img alt="CJF1986 Logo" src="images/CJF Music Logo.png"/>
+</a>
+<button aria-label="Toggle navigation" class="menu-toggle">
     ☰
   </button>
-
-
-  <ul class="nav-links">
-
-    <li><a href="index.html">Home</a></li>
-
-    <li><a href="beats.html">Beats</a></li>
-
-    <!-- DROPDOWN 1 -->
-    <li class="dropdown">
-
-      <a href="jayz-remixes.html" class="dropdown-toggle">
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="beats.html">Beats</a></li>
+<!-- DROPDOWN 1 -->
+<li class="dropdown">
+<a class="dropdown-toggle" href="jayz-remixes.html">
         Jay-Z Remixes ▾
       </a>
-
-      <ul class="dropdown-menu">
-        <li><a href="jayz-remixes.html">All Jay-Z Projects</a></li>
-        <li><a href="theblendprint.html">The Blendprint</a></li>
-        <li><a href="theblackblend.html">The Black Blend</a></li>
-        <li><a href="american-blend.html">The American Blend</a></li>
-        <li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
-      </ul>
-
-    </li>
-
-    <!-- DROPDOWN 2 -->
-    <li class="dropdown">
-
-      <a href="#" class="dropdown-toggle">
+<ul class="dropdown-menu">
+<li><a href="jayz-remixes.html">All Jay-Z Projects</a></li>
+<li><a href="theblendprint.html">The Blendprint</a></li>
+<li><a href="theblackblend.html">The Black Blend</a></li>
+<li><a href="american-blend.html">The American Blend</a></li>
+<li><a href="soul-of-hov.html">The Soul Of Hov</a></li>
+</ul>
+</li>
+<!-- DROPDOWN 2 -->
+<li class="dropdown">
+<a class="dropdown-toggle" href="#">
         Original Projects ▾
       </a>
-
-      <ul class="dropdown-menu">
-        <li><a href="original-projects.html">All Original Projects</a></li>
-        <li><a href="ash3.html">I'm Here Now</a></li>
-        <li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
-        <li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
-        <li><a href="2024-musical-odyssey.html">2024: A Musical Odyssey</a></li>
-      </ul>
-
-    </li>
-
-        <li><a href="remix-projects.html" class="active"> Remix Projects</a></li>
-
-
-    <li><a href="Remixes.html">Singles & Remixes</a></li>
-
-  </ul>
+<ul class="dropdown-menu">
+<li><a href="original-projects.html">All Original Projects</a></li>
+<li><a href="ash3.html">I'm Here Now</a></li>
+<li><a href="kquing-liv.html">Baddie From Around The Way</a></li>
+<li><a href="cjf-radiovol3.html">CJF Radio Vol 3</a></li>
+<li><a href="2024-musical-odyssey.html">2024: A Musical Odyssey</a></li>
+</ul>
+</li>
+<li><a class="" href="remix-projects.html"> Remix Projects</a></li>
+<li><a class="active" href="Remixes.html">Singles &amp; Remixes</a></li>
+</ul>
 </nav>
-
-<main>
-
-<h1> Single Remixes Playlist. Stream and download for free.</h1>
-
-<div class="album-grid">
-
-    <!-- TRACK 1 -->
-    <div class="album">
-        <img src="images/Pusha-T-cr-JMP-2023-billboard-1548.png" alt="A.S.H.3">
-
-        <h3>Pusha - T - The Games We Play (CJF Remix)</h3>
-
-        <audio controls>
-            <source src="Remixes/The Games We Play.mp3" type="audio/mpeg">
-        </audio>
-
-        <a href="https://drive.google.com/uc?export=download&id=1lWqka84CN1789_n4SgRj1ic4b3setEHz" download>
-            <button>Download</button>
-        </a>
-    </div>
-
-    <!-- TRACK 2 -->
-    <div class="album">
-        <img src="images/Big L.jpg" alt="ReDAMNed">
-
-        <h3>Big L - Danger Zone (CJF Remix) </h3>
-
-        <audio controls>
-            <source src="Remixes/Big L - Danger Zone.mp3" type="audio/mpeg">
-        </audio>
-
-        <a href="https://drive.google.com/uc?export=download&id=1vF4-SFzCzBan39ZDIWkugWLaQ2VH7D4B" download>
-            <button>Download</button>
-        </a>
-    </div>
-
-    <!-- TRACK 3 -->
-    <div class="album">
-        <img src="images/jadakiss_2.png" alt="Light Years">
-
-        <h3>JadaKiss - Angels Getting Pedicured (CJF Remix)</h3>
-
-        <audio controls>
-            <source src="Remixes/Angels Getting Pedicured - Jadakiss.mp3" type="audio/mpeg">
-        </audio>
-
-        <a href="https://drive.google.com/uc?export=download&id=1IhxqeRjodkVErEAqdP-upWGEJkqSDYVt" download>
-            <button>Download</button>
-        </a>
-    </div>
-
-    <!-- TRACK 4 -->
-    <div class="album">
-        <img src="images/nas.png" alt="Ransom">
-
-        <h3>Nas - Motion (CJF Remix)</h3>
-
-        <audio controls>
-            <source src="Remixes/Nas - Motion.mp3" type="audio/mpeg">
-        </audio>
-
-        <a href="https://drive.google.com/uc?export=download&id=1rDfMzVpK7ZGIrvlZz8Jo31jfhcTQojGM" download>
-            <button>Download</button>
-        </a>
-    </div>
-
-</div>
-
-</main>
-
+<main class="remix-hub singles-hub"><header class="singles-hero"><span class="hub-kicker">CJF1986 / Music Catalog</span><h1 class="hub-head">Singles &amp; Remixes</h1><p class="hub-lede">Stream and download CJF1986 remixes for free. Explore the tracks below.</p></header><section aria-labelledby="singles-title"><div class="catalog-head"><div><h2 id="singles-title">Explore the Collection</h2><p>Find a remix and listen before you download.</p></div><span class="catalog-count" id="catalog-count">4 tracks</span></div><div class="catalog-tools"><input aria-label="Search single remixes" class="catalog-search" id="catalog-search" placeholder="Search artists or tracks..." type="search"/><div aria-label="Filter by artist" class="filters" role="group"><button aria-pressed="true" class="filter-btn" data-filter="All" type="button">All Tracks</button><button aria-pressed="false" class="filter-btn" data-filter="Pusha T" type="button">Pusha T</button><button aria-pressed="false" class="filter-btn" data-filter="Big L" type="button">Big L</button><button aria-pressed="false" class="filter-btn" data-filter="Jadakiss" type="button">Jadakiss</button><button aria-pressed="false" class="filter-btn" data-filter="Nas" type="button">Nas</button></div></div><div class="album-grid-upgraded" id="catalog-grid"><article class="album-card" data-category="Pusha T" data-search="pusha t pusha - t - the games we play (cjf remix)"><div class="album-art-wrap"><img alt="Artwork for Pusha - T - The Games We Play (CJF Remix)" class="album-art" loading="lazy" src="images/Pusha-T-cr-JMP-2023-billboard-1548.png"/><span class="album-tag">Pusha T</span></div><div class="album-body"><h3>Pusha - T - The Games We Play (CJF Remix)</h3><div class="album-controls"><button aria-label="Play Pusha - T - The Games We Play (CJF Remix)" aria-pressed="false" class="preview-play" data-play="0" type="button">▶</button><div class="preview-status"><strong>Track preview</strong><span aria-live="polite" data-status="0">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1lWqka84CN1789_n4SgRj1ic4b3setEHz" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Big L" data-search="big l big l - danger zone (cjf remix)"><div class="album-art-wrap"><img alt="Artwork for Big L - Danger Zone (CJF Remix)" class="album-art" loading="lazy" src="images/Big L.jpg"/><span class="album-tag">Big L</span></div><div class="album-body"><h3>Big L - Danger Zone (CJF Remix)</h3><div class="album-controls"><button aria-label="Play Big L - Danger Zone (CJF Remix)" aria-pressed="false" class="preview-play" data-play="1" type="button">▶</button><div class="preview-status"><strong>Track preview</strong><span aria-live="polite" data-status="1">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1vF4-SFzCzBan39ZDIWkugWLaQ2VH7D4B" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Jadakiss" data-search="jadakiss jadakiss - angels getting pedicured (cjf remix)"><div class="album-art-wrap"><img alt="Artwork for JadaKiss - Angels Getting Pedicured (CJF Remix)" class="album-art" loading="lazy" src="images/jadakiss_2.png"/><span class="album-tag">Jadakiss</span></div><div class="album-body"><h3>JadaKiss - Angels Getting Pedicured (CJF Remix)</h3><div class="album-controls"><button aria-label="Play JadaKiss - Angels Getting Pedicured (CJF Remix)" aria-pressed="false" class="preview-play" data-play="2" type="button">▶</button><div class="preview-status"><strong>Track preview</strong><span aria-live="polite" data-status="2">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1IhxqeRjodkVErEAqdP-upWGEJkqSDYVt" rel="noopener noreferrer" target="_blank">Download</a></div></div></article><article class="album-card" data-category="Nas" data-search="nas nas - motion (cjf remix)"><div class="album-art-wrap"><img alt="Artwork for Nas - Motion (CJF Remix)" class="album-art" loading="lazy" src="images/nas.png"/><span class="album-tag">Nas</span></div><div class="album-body"><h3>Nas - Motion (CJF Remix)</h3><div class="album-controls"><button aria-label="Play Nas - Motion (CJF Remix)" aria-pressed="false" class="preview-play" data-play="3" type="button">▶</button><div class="preview-status"><strong>Track preview</strong><span aria-live="polite" data-status="3">Tap to listen</span></div></div><div class="album-links"><a class="download" href="https://drive.google.com/uc?export=download&amp;id=1rDfMzVpK7ZGIrvlZz8Jo31jfhcTQojGM" rel="noopener noreferrer" target="_blank">Download</a></div></div></article></div><div class="hub-empty" id="catalog-empty">No tracks match your search.</div></section><audio id="catalog-audio" preload="none"></audio></main>
 <footer>
-    <p>&copy; 2026 CJF Music. All rights reserved.</p>
-
-    <p>
+<p>© 2026 CJF Music. All rights reserved.</p>
+<p>
       Contact:
       <a href="mailto:cjfproductions1986@gmail.com">
         cjfproductions1986@gmail.com
       </a>
-    </p>
-
-    <p>
-      <a href="https://linktr.ee/cjfernanders1986" target="_blank">
+</p>
+<p>
+<a href="https://linktr.ee/cjfernanders1986" target="_blank">
         Linktree
       </a>
-    </p>
+</p>
 </footer>
-
 <!-- JS (FULL FIXED VERSION) -->
 <script>
 const toggle = document.querySelector(".menu-toggle");
@@ -189,6 +109,6 @@ dropdowns.forEach(dropdown => {
   });
 });
 </script>
-
-</body>
+<script>
+(()=>{const tracks=[{"title": "Pusha - T - The Games We Play (CJF Remix)", "audio": "Remixes/The Games We Play.mp3"}, {"title": "Big L - Danger Zone (CJF Remix)", "audio": "Remixes/Big L - Danger Zone.mp3"}, {"title": "JadaKiss - Angels Getting Pedicured (CJF Remix)", "audio": "Remixes/Angels Getting Pedicured - Jadakiss.mp3"}, {"title": "Nas - Motion (CJF Remix)", "audio": "Remixes/Nas - Motion.mp3"}];const audio=document.getElementById('catalog-audio');const buttons=[...document.querySelectorAll('[data-play]')];let active=-1;function sync(){buttons.forEach(b=>{const i=Number(b.dataset.play),playing=i===active&&!audio.paused;b.textContent=playing?'⏸':'▶';b.setAttribute('aria-pressed',String(playing));b.setAttribute('aria-label',(playing?'Pause ':'Play ')+tracks[i].title);const status=document.querySelector('[data-status="'+i+'"]');if(status&&status.dataset.error!=='true')status.textContent=playing?'Now playing':i===active?'Paused':'Tap to listen';});}async function select(i){if(active===i){if(audio.paused){try{await audio.play()}catch(e){error(i)}}else audio.pause();sync();return;}audio.pause();active=i;audio.src=tracks[i].audio;document.querySelectorAll('[data-status]').forEach(el=>delete el.dataset.error);try{await audio.play()}catch(e){error(i)}sync();}function error(i){const status=document.querySelector('[data-status="'+i+'"]');if(status){status.dataset.error='true';status.textContent='Audio unavailable — check file';}}buttons.forEach(b=>b.addEventListener('click',()=>select(Number(b.dataset.play))));audio.addEventListener('play',sync);audio.addEventListener('pause',sync);audio.addEventListener('ended',sync);audio.addEventListener('error',()=>{if(active>=0)error(active)});const search=document.getElementById('catalog-search'),filters=[...document.querySelectorAll('[data-filter]')],cards=[...document.querySelectorAll('.album-card')];let filter='All';function update(){const q=search.value.trim().toLowerCase();let n=0;cards.forEach(c=>{const match=(filter==='All'||c.dataset.category===filter)&&c.dataset.search.includes(q);c.hidden=!match;if(match)n++});document.getElementById('catalog-count').textContent=n+' '+(n===1?'track':'tracks');document.getElementById('catalog-empty').classList.toggle('visible',n===0)}search.addEventListener('input',update);filters.forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;filters.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));update()}));sync();})();</script></body>
 </html>
