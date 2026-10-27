@@ -2,7 +2,10 @@
 
 <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Remix Projects | CJF Music</title><meta content="Explore remix albums and projects produced by CJF1986. Listen to previews and download albums." name="description"/><link href="styles.css" rel="stylesheet"/><style>
 :root{color-scheme:dark}body{background:#0d0d0e;color:#f5f0e7} .remix-hub{--gold:#e6b55e;--muted:#a7a3a0;--line:#37302a;max-width:1240px;margin:0 auto;padding:36px 22px 90px;font-family:Arial,Helvetica,sans-serif;box-sizing:border-box}.remix-hub *{box-sizing:border-box}.remix-hub button,.remix-hub input{font:inherit}.remix-hub button{cursor:pointer}.remix-hub a{text-decoration:none}.hub-kicker{color:var(--gold);text-transform:uppercase;font-weight:800;font-size:12px;letter-spacing:2.4px}.hub-head{margin:14px 0 16px;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:clamp(32px,4.3vw,48px);font-weight:700;line-height:1.16;letter-spacing:-0.8px;text-align:center}.hub-lede{color:#cfc9c1;max-width:800px;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.75;font-size:clamp(16px,1.5vw,18px);margin:0 0 34px;text-align:left}.featured{background:linear-gradient(125deg,#282015,#171719 60%,#121214);border:1px solid #5a4329;border-radius:22px;padding:26px;display:grid;grid-template-columns:minmax(170px,310px) 1fr;align-items:center;gap:32px;box-shadow:0 15px 35px #0005}.featured img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;box-shadow:0 10px 30px #0009}.featured h2{font-size:clamp(25px,4vw,43px);line-height:1.15;color:white;margin:12px 0}.featured p{color:#c9c1b4;line-height:1.65}.hub-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:22px}.hub-btn{border-radius:999px;padding:11px 19px;min-height:43px;font-size:13px;font-weight:750;border:1px solid #a78144;background:var(--gold);color:#17110a;display:inline-flex;align-items:center;justify-content:center;gap:8px}.hub-btn.secondary{background:transparent;color:#f2d29b;border-color:#81643d}.hub-btn:hover{filter:brightness(1.1)}.catalog-head{margin:48px 0 19px;display:flex;justify-content:space-between;align-items:end;gap:14px;flex-wrap:wrap}.catalog-head h2{font-size:clamp(24px,3vw,34px);margin:0 0 7px;color:white}.catalog-head p{margin:0;color:#a9a39d}.catalog-count{font-size:13px;color:#d9b779}.catalog-tools{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:0 0 23px}.catalog-search{flex:1 1 290px;background:#1c1c1f;color:white;border:1px solid #4a4239;border-radius:12px;padding:14px 17px;min-width:0;outline-offset:3px}.catalog-search:focus{outline:2px solid #e6b55e}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter-btn{background:#242326;border:1px solid #454044;color:#d5d1cb;border-radius:999px;padding:10px 15px;font-size:13px;font-weight:700}.filter-btn[aria-pressed=true]{background:#e6b55e;border-color:#e6b55e;color:#15100a}.album-grid-upgraded{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}.album-card{min-width:0;border-radius:16px;background:#1a1a1d;border:1px solid #373332;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}.album-card:hover{transform:translateY(-3px);border-color:#9d7842}.album-art-wrap{position:relative;background:#121212}.album-art{display:block;width:100%;aspect-ratio:1;object-fit:cover}.album-tag{position:absolute;top:11px;left:11px;background:#111d;color:#eac78a;border:1px solid #8d693d88;border-radius:99px;padding:6px 10px;font-size:11px;font-weight:700}.album-body{padding:17px;display:flex;flex-direction:column;gap:13px;flex:1}.album-body h3{color:white;font-size:16px;line-height:1.4;margin:0;min-height:45px}.album-controls{display:flex;align-items:center;gap:11px}.preview-play{width:44px;height:44px;min-width:44px;border-radius:50%;border:0;background:#e6b55e;color:#111;font-size:18px;display:grid;place-items:center}.preview-play:hover{background:#f3ca7f}.preview-play:focus-visible,.hub-btn:focus-visible,.filter-btn:focus-visible{outline:3px solid white;outline-offset:3px}.preview-status{min-width:0;color:#bcb6af;font-size:12px;line-height:1.3}.preview-status strong{display:block;color:#e9c68d;font-size:12px;margin-bottom:3px}.album-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}.album-links a{flex:1 1 auto;text-align:center;padding:10px 9px;border:1px solid #6c5534;color:#f1d6a8;border-radius:9px;font-size:12px;font-weight:750}.album-links a.download{background:#e6b55e;color:#19130c;border-color:#e6b55e}.album-links a:hover{filter:brightness(1.13)}.hub-empty{display:none;border:1px dashed #6a5942;border-radius:15px;padding:40px;text-align:center;color:#d6c4a7}.hub-empty.visible{display:block}.hub-note{margin:26px 0 0;color:#aaa29a;font-size:13px;line-height:1.6}.album-card[hidden]{display:none!important}@media(max-width:1050px){.album-grid-upgraded{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:750px){.featured{grid-template-columns:1fr}.featured img{max-width:290px}.album-grid-upgraded{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:470px){.remix-hub{padding:24px 14px 70px}.featured{padding:17px;gap:14px}.album-grid-upgraded{gap:12px}.album-body{padding:12px;gap:10px}.album-body h3{font-size:14px;min-height:58px}.album-tag{font-size:10px}.album-links a{font-size:11px}.preview-status{font-size:11px}}
-.remix-intro{width:100%;max-width:900px;margin:0 auto 38px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.remix-intro .hub-kicker{display:block;text-align:center;width:100%}.remix-intro .hub-head{width:100%;margin:14px auto 16px;text-align:center}.remix-intro .hub-lede{width:100%;max-width:760px;margin:0 auto;text-align:center;text-wrap:balance}@media(max-width:600px){.remix-intro{margin-bottom:30px}.remix-intro .hub-lede{font-size:16px;line-height:1.65}}</style></head><body>
+.remix-intro{width:100%;max-width:900px;margin:0 auto 38px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}.remix-intro .hub-kicker{display:block;text-align:center;width:100%}.remix-intro .hub-head{width:100%;margin:14px auto 16px;text-align:center}.remix-intro .hub-lede{width:100%;max-width:760px;margin:0 auto;text-align:center;text-wrap:balance}@media(max-width:600px){.remix-intro{margin-bottom:30px}.remix-intro .hub-lede{font-size:16px;line-height:1.65}}
+/* Compact sticky catalog player, styled to match the homepage player */
+body{padding-bottom:105px}.cjf-player{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:#171719f5;backdrop-filter:blur(14px);border-top:1px solid #8a683c;box-shadow:0 -8px 30px #0009;display:flex;align-items:center;gap:16px;padding:11px max(18px,calc((100vw - 1240px)/2));font-family:Arial,Helvetica,sans-serif;color:#fff;min-height:82px;box-sizing:border-box}.cjf-player *{box-sizing:border-box}.cjf-player-art{width:54px;height:54px;object-fit:cover;border-radius:8px;flex-shrink:0}.cjf-player-meta{width:240px;min-width:0;display:flex;flex-direction:column;gap:4px}.cjf-player-meta strong{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cjf-player-meta small{color:#d9b779;font-size:11px}.cjf-player-center{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:5px}.cjf-player-buttons{display:flex;gap:16px;align-items:center}.cjf-player-buttons button{border:0;background:transparent;color:#eac58b;font-size:20px;cursor:pointer;line-height:1.2}.cjf-player-buttons #cjf-play{background:#e6b55e;color:#17110a;border-radius:50%;width:35px;height:35px;font-size:16px}.cjf-player-seek{display:flex;align-items:center;gap:9px;width:100%;max-width:470px;color:#bbb;font-size:11px;font-variant-numeric:tabular-nums}.cjf-player input[type=range]{accent-color:#e6b55e;cursor:pointer;min-width:0}.cjf-player-seek input{flex:1;width:100%}.cjf-player-volume{display:flex;align-items:center;gap:8px;font-size:16px}.cjf-player-volume input{width:90px}.cjf-player button:focus-visible,.cjf-player input:focus-visible{outline:2px solid #fff;outline-offset:3px}@media(max-width:760px){body{padding-bottom:110px}.cjf-player{gap:10px;padding:9px 12px;flex-wrap:wrap;min-height:96px}.cjf-player-art{width:42px;height:42px}.cjf-player-meta{width:auto;flex:1}.cjf-player-center{order:3;flex-basis:100%;flex-direction:row;gap:10px}.cjf-player-buttons{gap:10px}.cjf-player-seek{max-width:none}.cjf-player-volume{display:none}} 
+</style></head><body>
 <nav class="navbar">
 <a class="logo" href="index.html">
 <img alt="CJF1986 Logo" src="images/CJF Music Logo.png"/>
@@ -52,6 +55,12 @@
 <p>Contact: <a href="mailto:cjfproductions1986@gmail.com">cjfproductions1986@gmail.com</a></p>
 <p><a href="https://linktr.ee/cjfernanders1986" target="_blank">Linktree</a></p>
 </footer>
+<div class="cjf-player" id="cjf-player" aria-label="Remix projects music player" role="region">
+<img class="cjf-player-art" id="cjf-player-art" src="images/CJF Music Logo.png" alt="Current album cover">
+<div class="cjf-player-meta"><strong id="cjf-player-title">Choose an album preview</strong><small id="cjf-player-artist">CJF1986 • Remix Projects</small></div>
+<div class="cjf-player-center"><div class="cjf-player-buttons"><button id="cjf-prev" aria-label="Previous album preview" type="button">⏮</button><button id="cjf-play" aria-label="Play" type="button">▶</button><button id="cjf-next" aria-label="Next album preview" type="button">⏭</button></div><div class="cjf-player-seek"><span id="cjf-elapsed">0:00</span><input id="cjf-seek" type="range" min="0" max="100" value="0" aria-label="Seek through preview"><span id="cjf-duration">0:00</span></div></div>
+<label class="cjf-player-volume">🔊 <input id="cjf-volume" type="range" min="0" max="100" value="80" aria-label="Volume"></label>
+</div>
 <script>
 // Mobile navigation — keep existing dropdown behavior.
 const toggle = document.querySelector('.menu-toggle');
@@ -66,16 +75,52 @@ document.querySelectorAll('.dropdown-toggle').forEach(dropdown => dropdown.addEv
  const buttons = Array.from(document.querySelectorAll('[data-play]'));
  const featuredPlay = document.getElementById('featured-play');
  let active = -1;
+ const player = document.getElementById('cjf-player');
+ const playerArt = document.getElementById('cjf-player-art');
+ const playerTitle = document.getElementById('cjf-player-title');
+ const playerArtist = document.getElementById('cjf-player-artist');
+ const playerPlay = document.getElementById('cjf-play');
+ const playerPrev = document.getElementById('cjf-prev');
+ const playerNext = document.getElementById('cjf-next');
+ const playerSeek = document.getElementById('cjf-seek');
+ const playerElapsed = document.getElementById('cjf-elapsed');
+ const playerDuration = document.getElementById('cjf-duration');
+ const playerVolume = document.getElementById('cjf-volume');
+ const formatTime = seconds => Number.isFinite(seconds) ? Math.floor(seconds/60)+':'+String(Math.floor(seconds%60)).padStart(2,'0') : '0:00';
+ audio.volume = Number(playerVolume.value)/100;
+ function syncPlayer() {
+   const playing = active >= 0 && !audio.paused;
+   playerPlay.textContent = playing ? '⏸' : '▶';
+   playerPlay.setAttribute('aria-label',playing ? 'Pause preview' : 'Play preview');
+   if (active >= 0) {
+     playerTitle.textContent = albums[active].title;
+     playerArtist.textContent = 'CJF1986 • Album preview';
+     playerArt.src = albums[active].image;
+     playerArt.alt = albums[active].title + ' cover';
+   }
+   playerElapsed.textContent = formatTime(audio.currentTime);
+   playerDuration.textContent = formatTime(audio.duration);
+   playerSeek.value = Number.isFinite(audio.duration) && audio.duration > 0 ? String(Math.round(audio.currentTime/audio.duration*100)) : '0';
+ }
+ playerPlay.addEventListener('click', () => select(active < 0 ? 0 : active));
+ playerPrev.addEventListener('click', () => select(active < 0 ? 0 : (active - 1 + albums.length) % albums.length));
+ playerNext.addEventListener('click', () => select(active < 0 ? 0 : (active + 1) % albums.length));
+ playerVolume.addEventListener('input', () => { audio.volume = Number(playerVolume.value)/100; });
+ playerSeek.addEventListener('input', () => {
+   if (Number.isFinite(audio.duration) && audio.duration > 0) audio.currentTime = Number(playerSeek.value)/100*audio.duration;
+ });
+ ['timeupdate','loadedmetadata','durationchange','seeked'].forEach(event => audio.addEventListener(event,syncPlayer));
  function sync() {
+   syncPlayer();
   buttons.forEach(button => {const i=Number(button.dataset.play), playing=i===active&&!audio.paused;button.textContent=playing?'⏸':'▶';button.setAttribute('aria-pressed',String(playing));button.setAttribute('aria-label',(playing?'Pause':'Play')+' preview of '+albums[i].title);const status=document.querySelector('[data-status="'+i+'"]');if(status && status.dataset.error!=='true')status.textContent=playing?'Now playing':i===active?'Paused':'Tap to listen';});
   const playing=active===0&&!audio.paused;featuredPlay.textContent=playing?'⏸ Pause Preview':'▶ Listen to Preview';featuredPlay.setAttribute('aria-pressed',String(playing));
  }
  async function select(i) {
   if(active===i) {if(audio.paused) {try {await audio.play()}catch(e){showError(i)}} else audio.pause();sync();return;}
-  active=i;audio.pause();audio.src=albums[i].audio;document.querySelectorAll('[data-status]').forEach(el=>{delete el.dataset.error;});sync();
+  active=i;audio.pause();audio.src=albums[i].audio;syncPlayer();document.querySelectorAll('[data-status]').forEach(el=>{delete el.dataset.error;});sync();
   try {await audio.play();} catch(e) {showError(i);} sync();
  }
- function showError(i) {const status=document.querySelector('[data-status="'+i+'"]');if(status) {status.dataset.error='true';status.textContent='Preview unavailable — check audio file';}}
+ function showError(i) {playerArtist.textContent='Preview unavailable — check MP3 path';const status=document.querySelector('[data-status="'+i+'"]');if(status) {status.dataset.error='true';status.textContent='Preview unavailable — check audio file';}}
  buttons.forEach(button=>button.addEventListener('click',()=>select(Number(button.dataset.play))));
  featuredPlay.addEventListener('click',()=>select(0));
  audio.addEventListener('play',sync);audio.addEventListener('pause',sync);audio.addEventListener('ended',()=>{audio.currentTime=0;sync()});
